@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-philico-food", "Project-philico-food\Project-philico-food.csproj", "{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Debug|Any CPU.Build.0 = Debug|x64
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Debug|x64.ActiveCfg = Debug|x64
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Debug|x64.Build.0 = Debug|x64
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Release|x64.ActiveCfg = Release|x64
+		{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43CF9443-2EC2-481B-97C1-22D0071D38D5}
+	EndGlobalSection
+EndGlobal

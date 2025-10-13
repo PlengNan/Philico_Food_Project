@@ -1,0 +1,13 @@
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\Debug\Project-philico-food.exe.config
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\Debug\Project-philico-food.exe
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\Debug\Project-philico-food.pdb
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\Debug\System.Data.SQLite.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project-philico-food.csproj.AssemblyReference.cache
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project_philico_food.Form1.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project_philico_food.Properties.Resources.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project-philico-food.csproj.GenerateResource.cache
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project-philico-food.csproj.CoreCompileInputs.cache
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project-.18C6BE33.Up2Date
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project-philico-food.exe
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project-philico-food.pdb
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\Debug\Project-philico-food.exe.config

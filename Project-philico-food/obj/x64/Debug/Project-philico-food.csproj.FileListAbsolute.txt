@@ -1,0 +1,116 @@
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe.config
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.pdb
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Data.SQLite.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.AssemblyReference.cache
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Properties.Resources.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.GenerateResource.cache
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.CoreCompileInputs.cache
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-.18C6BE33.Up2Date
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.exe
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.pdb
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\e_sqlite3.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.batteries_v2.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.core.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Buffers.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Memory.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Numerics.Vectors.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Buffers.xml
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Memory.xml
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Numerics.Vectors.xml
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.exe.config
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\Guna.UI2.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmLogin.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmCustomer.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmMain.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmProduct.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmWeighing.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmSetting.resources
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Data.Sqlite.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+D:\Project\Project-Philco-food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Data.Sqlite.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\e_sqlite3.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe.config
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.pdb
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Guna.UI2.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Data.Sqlite.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.batteries_v2.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.core.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Buffers.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Data.SQLite.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Memory.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Numerics.Vectors.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Data.Sqlite.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Buffers.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Memory.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Numerics.Vectors.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.AssemblyReference.cache
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.exe.config
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmCustomer.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmLogin.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmMain.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmProduct.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmSetting.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmWeighing.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Properties.Resources.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.GenerateResource.cache
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.CoreCompileInputs.cache
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-.18C6BE33.Up2Date
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.exe
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.pdb
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmUsers.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.Interop.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.Interop.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\BCrypt.Net-Next.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\BCrypt.Net-Next.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\e_sqlite3.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe.config
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.pdb
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\BCrypt.Net-Next.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Guna.UI2.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Data.Sqlite.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.Interop.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.batteries_v2.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.core.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Buffers.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Data.SQLite.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Memory.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Numerics.Vectors.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\BCrypt.Net-Next.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Data.Sqlite.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.Interop.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Buffers.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Memory.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Numerics.Vectors.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.AssemblyReference.cache
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.exe.config
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmCustomer.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmLogin.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmMain.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmProduct.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmSetting.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmUsers.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmWeighing.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Properties.Resources.resources
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.GenerateResource.cache
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.csproj.CoreCompileInputs.cache
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-.18C6BE33.Up2Date
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.exe
+D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.pdb
