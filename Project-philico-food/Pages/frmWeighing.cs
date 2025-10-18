@@ -14,10 +14,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Project_philico_food.Pages
 {
+    using System.Globalization;
+    using System.Net.NetworkInformation;
+
     public partial class frmWeighing : Form
     {
+        AESEncryption aESEncryption = new AESEncryption();
+
         private volatile bool _isClosing = false;
 
         public frmWeighing()
@@ -102,9 +109,10 @@ namespace Project_philico_food.Pages
             try
             {
                 var detailRepo = new OrderDetailDb();
-                var dt = detailRepo.GetOpenFirstWeighTable();
-                dgvList.Rows.Clear();
+                string encIN = aESEncryption.Encrypt("IN");
+                var dt = detailRepo.GetOpenFirstWeighTable(encIN);
 
+                dgvList.Rows.Clear();
                 if (dt == null || dt.Rows.Count == 0) return;
 
                 foreach (DataRow r in dt.Rows)
@@ -113,16 +121,32 @@ namespace Project_philico_food.Pages
                     var row = dgvList.Rows[rowIndex];
 
                     row.Cells["cl_orNum"].Value = r["OrderNumber"]?.ToString();
-                    row.Cells["cl_datez"].Value = r["Datez"]?.ToString();
-                    row.Cells["cl_timez"].Value = r["Timez"]?.ToString();
+                    row.Cells["cl_datez"].Value = SafeDec(r["Datez"]);
+                    row.Cells["cl_timez"].Value = SafeDec(r["Timez"]);
                     row.Cells["cl_wg"].Value = r["Weight"]?.ToString();
-                    row.Cells["cl_lcP"].Value = r["LicensePlate"]?.ToString();
+                    row.Cells["cl_lcP"].Value = SafeDec(r["LicensePlate"]);
                 }
 
                 dgvList.ClearSelection();
             }
-            catch {  }
+            catch { }
         }
+        private string SafeDec(object dbVal)
+        {
+            var s = dbVal?.ToString();
+            if (string.IsNullOrEmpty(s)) return "";
+            try
+            {
+                string plain = aESEncryption.Decrypt(s);
+                return string.IsNullOrEmpty(plain) ? "" : plain;
+            }
+            catch
+            {
+
+                return s;
+            }
+        }
+
 
         //void getFirstWeight()
         //{
@@ -340,7 +364,7 @@ namespace Project_philico_food.Pages
                 msg.Parent = this;
                 msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
                 msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                msg.Show ("Invalid weight value");
+                msg.Show("Invalid weight value");
                 return;
             }
 
@@ -377,9 +401,9 @@ namespace Project_philico_food.Pages
 
             var orderRepo = new OrderDb();
             var detailRepo = new OrderDetailDb();
+            var ci = System.Globalization.CultureInfo.InvariantCulture;
 
-            var activeOrder = orderRepo.GetActiveByPlate(licensePlate);
-
+            var activeOrder = orderRepo.GetActiveByPlate(aESEncryption.Encrypt(licensePlate));
             if (activeOrder == null)
             {
                 // weight in
@@ -393,15 +417,15 @@ namespace Project_philico_food.Pages
                     return;
                 }
 
-                var order = new OrderModel
+                OrderModel order = new OrderModel
                 {
                     OrderNumber = orderNumber,
-                    ProductName = productName,
-                    CustomerName = customerName,
-                    Note = note,
+                    ProductName = aESEncryption.Encrypt(productName),
+                    CustomerName = aESEncryption.Encrypt(customerName),
+                    Note = string.IsNullOrWhiteSpace(note) ? "" : aESEncryption.Encrypt(note),
                     NetWeight = 0,
                     Status = "Process",
-                    LicensePlate = licensePlate
+                    LicensePlate = aESEncryption.Encrypt(licensePlate)
                 };
 
                 if (!orderRepo.addNew(order))
@@ -413,14 +437,15 @@ namespace Project_philico_food.Pages
                     return;
                 }
 
-                var detailIn = new OrderDetailModel
+                OrderDetailModel detailIn = new OrderDetailModel
                 {
                     OrderNumber = orderNumber,
-                    Datez = DateTime.Now.ToString("yyyy-MM-dd"),
-                    Timez = DateTime.Now.ToString("HH:mm:ss"),
+                    Datez = aESEncryption.Encrypt(DateTime.Now.ToString("yyyy-MM-dd", ci)),
+                    Timez = aESEncryption.Encrypt(DateTime.Now.ToString("HH:mm:ss", ci)),
                     Weight = weight,
-                    WeightType = "IN"
+                    WeightType = aESEncryption.Encrypt("IN")
                 };
+
 
                 if (!detailRepo.Add(detailIn))
                 {
@@ -433,7 +458,7 @@ namespace Project_philico_food.Pages
                 msg.Parent = this;
                 msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
                 msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                msg.Show("First weighing IN saved Successfully");
+                msg.Show("Weight IN saved Successfully");
                 ResetWeighingInputs();
             }
             else
@@ -443,7 +468,8 @@ namespace Project_philico_food.Pages
 
                 // ดึง weight in จาก OrderDetail
                 var details = detailRepo.GetByOrderNumber(orderNumber);
-                if (details == null || details.All(d => !string.Equals(d.WeightType, "IN", StringComparison.OrdinalIgnoreCase)))
+                var detailIn = details.FirstOrDefault(d => aESEncryption.Decrypt(d.WeightType) == "IN");
+                if (detailIn == null)
                 {
                     msg.Parent = this;
                     msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
@@ -452,15 +478,15 @@ namespace Project_philico_food.Pages
                     return;
                 }
 
-                int firstWeight = details.First(d => d.WeightType == "IN").Weight;
+                int firstWeight = detailIn.Weight;
 
-                var detailOut = new OrderDetailModel
+                OrderDetailModel detailOut = new OrderDetailModel
                 {
                     OrderNumber = orderNumber,
-                    Datez = DateTime.Now.ToString("yyyy-MM-dd"),
-                    Timez = DateTime.Now.ToString("HH:mm:ss"),
+                    Datez = aESEncryption.Encrypt(DateTime.Now.ToString("yyyy-MM-dd", ci)),
+                    Timez = aESEncryption.Encrypt(DateTime.Now.ToString("HH:mm:ss", ci)),
                     Weight = weight,
-                    WeightType = "OUT"
+                    WeightType = aESEncryption.Encrypt("OUT")
                 };
 
                 if (!detailRepo.Add(detailOut))
@@ -474,7 +500,12 @@ namespace Project_philico_food.Pages
 
                 int net = Math.Abs(weight - firstWeight);
 
-                if (!orderRepo.UpdateNetWeight(orderNumber, net, "Completed" , note))
+                if (!orderRepo.UpdateNetWeight(
+        orderNumber,
+        net,
+        "Completed",
+        string.IsNullOrWhiteSpace(note) ? "" : aESEncryption.Encrypt(note)
+    ))
                 {
                     msg.Parent = this;
                     msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
@@ -486,12 +517,13 @@ namespace Project_philico_food.Pages
                 msg.Parent = this;
                 msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
                 msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                msg.Show("First weighing Out saved Successfully");
+                msg.Show("Weight Out saved Successfully");
                 ResetWeighingInputs();
             }
 
             // refresh right grid (process list)
             //getFirstWeight();
+            ResetWeighingInputs();
             LoadFirstWeighGrid();
 
         }
@@ -597,6 +629,7 @@ namespace Project_philico_food.Pages
         }
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             var row = dgvList.Rows[e.RowIndex];
             string orderNumber = row.Cells["cl_orNum"].Value?.ToString();
             if (string.IsNullOrWhiteSpace(orderNumber)) return;
@@ -605,17 +638,28 @@ namespace Project_philico_food.Pages
             var order = orderRepo.getOrderByOrderNumberOrId(orderNumber);
             if (order == null) return;
 
-            var customer = _customerList.FirstOrDefault(c => decryptData(c.CustomerName) == order.CustomerName);
-            var product = _productList.FirstOrDefault(p => decryptData(p.ProductName) == order.ProductName);
+            string cusName = SafeDec(order.CustomerName);
+            string prdName = SafeDec(order.ProductName);
+            string plate = SafeDec(order.LicensePlate);
+            string note = SafeDec(order.Note);
+
+            var customer = _customerList.FirstOrDefault(c => SafeDec(c.CustomerName) == cusName);
+            var product = _productList.FirstOrDefault(p => SafeDec(p.ProductName) == prdName);
 
             SelectInCombo(cbbCusCode, customer != null ? decryptData(customer.CustomerCode) : "");
-            SelectInCombo(cbbCusName, order.CustomerName ?? "");
+            SelectInCombo(cbbCusName, customer != null ? decryptData(customer.CustomerName) : "");
 
             SelectInCombo(cbbPrdCode, product != null ? decryptData(product.ProductCode) : "");
-            SelectInCombo(cbbPrdName, order.ProductName ?? "");
+            SelectInCombo(cbbPrdName, product != null ? decryptData(product.ProductName) : "");
 
-            txtLicense.Text = order.LicensePlate ?? "";
-            txtNote.Text = order.Note ?? "";
+            //txtLicense.Text = order.LicensePlate ?? "";
+            //txtNote.Text = order.Note ?? "";
+
+
+            //cbbCusName.Text = cusName;
+            //cbbPrdName.Text = prdName;
+            txtLicense.Text = plate;
+            txtNote.Text = note;
             lblWeight.Text = row.Cells["cl_wg"].Value?.ToString() ?? "0";
 
             btnSave.Enabled = true;

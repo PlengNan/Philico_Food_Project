@@ -114,3 +114,5 @@ D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug
 D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-.18C6BE33.Up2Date
 D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.exe
 D:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project-philico-food.pdb
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmReport.resources
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\obj\x64\Debug\Project_philico_food.Pages.frmTdrp.resources

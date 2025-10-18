@@ -68,12 +68,18 @@ namespace Project_philico_food.Pages
 
         private void btnTodayReport_Click(object sender, EventArgs e)
         {
-
+            frmTdrp frmTdrp = new frmTdrp();
+            this.Hide();
+            frmTdrp.ShowDialog();
+            this.Show();
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-
+            frmReport frmReport = new frmReport();
+            this.Hide();
+            frmReport.ShowDialog();
+            this.Show();
         }
         private void btnUsers_Click(object sender, EventArgs e)
         {

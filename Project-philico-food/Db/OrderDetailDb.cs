@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,7 @@ namespace Project_philico_food.Db
                     //cmd.Parameters.AddWithValue("@Timez", m.Timez);
                     //cmd.Parameters.AddWithValue("@Weight", m.Weight);
                     //cmd.Parameters.AddWithValue("@WeightType", m.WeightType);
-                    //cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                     return true;
                 }
             }
@@ -79,29 +80,27 @@ namespace Project_philico_food.Db
             return list;
         }
 
-        public DataTable GetOpenFirstWeighTable()
+        public DataTable GetOpenFirstWeighTable(string encWeightType)
         {
-            var dt = new DataTable();
-            try
-            {
-                const string sql = @"
-            SELECT  od.OrderNumber,
-                    od.Datez,
-                    od.Timez,
-                    od.Weight,
-                    o.LicensePlate
-            FROM OrderDetail od
-            INNER JOIN Orders o ON o.OrderNumber = od.OrderNumber
-            WHERE od.WeightType = 'IN' AND o.Status = 'Process'
-            ORDER BY od.Id DESC";
+            const string sql = @"
+                                SELECT  d.OrderNumber,
+                                        d.Datez,
+                                        d.Timez,
+                                        d.Weight,
+                                        o.LicensePlate
+                                FROM OrderDetail d
+                                JOIN Orders o ON o.OrderNumber = d.OrderNumber
+                                WHERE o.Status = 'Process'
+                                  AND d.WeightType = @wt
+                                ORDER BY d.Id DESC;";
 
-                using (var da = new SQLiteDataAdapter(sql, _con))
-                {
-                    da.Fill(dt);
-                }
+            using (var da = new SQLiteDataAdapter(sql, _con))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@wt", encWeightType);
+                var dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
-            catch (Exception ex) { Err = ex.Message; return null; }
-            return dt;
         }
         public bool DeleteByOrderNumber(string orderNumber)
         {
@@ -110,7 +109,6 @@ namespace Project_philico_food.Db
                 const string sql = "DELETE FROM OrderDetail WHERE OrderNumber=@no";
                 using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    //cmd.Parameters.AddWithValue("@no", orderNumber);
                     cmd.Parameters.Add(new SQLiteParameter("@no", orderNumber));
                     cmd.ExecuteNonQuery();
                 }

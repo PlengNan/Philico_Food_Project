@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_philico_food.Models
 {
-    internal class OrderDetailModel
+    public class OrderDetailModel
     {
         public int Id { get; set; }
         public string OrderNumber { get; set; }
@@ -15,5 +15,7 @@ namespace Project_philico_food.Models
         public int Weight { get; set; }
         public string WeightType { get; set; }
         public string LicensePlate { get; set; }
+        public string WeightEnc {  get; set; }
+        public int PrintNo { get; set; } = 1;
     }
 }

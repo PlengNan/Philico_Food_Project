@@ -160,39 +160,68 @@ namespace Project_philico_food.Db
 
         public OrderModel getOrderByOrderNumberOrId(string orderNumber)
         {
-            OrderModel model = new OrderModel();
+            //OrderModel model = new OrderModel();
+            //try
+            //{
+            //    string sql = $"SELECT * FROM Ordesrs WHERE OrderNumber = '{orderNumber}'";
+            //    using (SQLiteDataAdapter da = new SQLiteDataAdapter(sql, _con))
+            //    {
+            //        DataTable tb = new DataTable();
+            //        da.Fill(tb);
+            //        if (tb.Rows.Count == 0 || tb == null)
+            //            return null;
+            //        foreach (DataRow dr in tb.Rows)
+            //        {
+            //            model = new OrderModel
+            //            {
+            //                Id = int.Parse(dr["Id"].ToString()),
+            //                CustomerName = dr["CustomerName"].ToString(),
+            //                ProductName = dr["ProductName"].ToString(),
+            //                Note = dr["Note"].ToString(),
+            //                NetWeight = int.Parse(dr["NetWeight"].ToString()),
+            //                OrderNumber = dr["OrderNumber"].ToString(),
+            //                Status = dr["Status"].ToString(),
+            //                LicensePlate = dr["LicensePlate"].ToString()
+            //            };
+            //            break;
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Err = ex.Message;
+            //    return null;
+            //}
+            //return model;
             try
             {
-                string sql = $"SELECT * FROM Orders WHERE OrderNumber = '{orderNumber}'";
-                using (SQLiteDataAdapter da = new SQLiteDataAdapter(sql, _con))
+                const string sql = "SELECT * FROM Orders WHERE OrderNumber = @no";
+                using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    DataTable tb = new DataTable();
-                    da.Fill(tb);
-                    if (tb.Rows.Count == 0 || tb == null)
-                        return null;
-                    foreach (DataRow dr in tb.Rows)
+                    cmd.Parameters.AddWithValue("@no", orderNumber);
+
+                    using (var da = new SQLiteDataAdapter(cmd))
                     {
-                        model = new OrderModel
+                        var tb = new DataTable();
+                        da.Fill(tb);
+                        if (tb == null || tb.Rows.Count == 0) return null;
+
+                        var dr = tb.Rows[0];
+                        return new OrderModel
                         {
-                            Id = int.Parse(dr["Id"].ToString()),
-                            CustomerName = dr["CustomerName"].ToString(),
-                            ProductName = dr["ProductName"].ToString(),
-                            Note = dr["Note"].ToString(),
-                            NetWeight = int.Parse(dr["NetWeight"].ToString()),
-                            OrderNumber = dr["OrderNumber"].ToString(),
-                            Status = dr["Status"].ToString(),
-                            LicensePlate = dr["LicensePlate"].ToString()
+                            Id = Convert.ToInt32(dr["Id"]),
+                            CustomerName = dr["CustomerName"]?.ToString(),
+                            ProductName = dr["ProductName"]?.ToString(),
+                            Note = dr["Note"]?.ToString(),
+                            NetWeight = dr["NetWeight"] == DBNull.Value ? 0 : Convert.ToInt32(dr["NetWeight"]),
+                            OrderNumber = dr["OrderNumber"]?.ToString(),
+                            Status = dr["Status"]?.ToString(),
+                            LicensePlate = dr["LicensePlate"]?.ToString()
                         };
-                        break;
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                Err = ex.Message;
-                return null;
-            }
-            return model;
+            catch (Exception ex) { Err = ex.Message; return null; }
         }
 
         public OrderModel getOrderByOrderNumberOrId(int id)
@@ -234,24 +263,17 @@ namespace Project_philico_food.Db
         }
 
 
-        public bool UpdateNetWeight(string orderNumber, int netWeight, string newStatus , string note)
+        public bool UpdateNetWeight(string orderNumber, int netWeight, string newStatus, string noteEnc)
         {
             try
             {
-                const string sql = "UPDATE Orders SET NetWeight=@w, Status=@s,  Note=@n WHERE OrderNumber=@no";
+                const string sql = "UPDATE Orders SET NetWeight=@w, Status=@s, Note=@n WHERE OrderNumber=@no";
                 using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    cmd.Parameters.Add(new SQLiteParameter("@w", netWeight));
+                    cmd.Parameters.Add(new SQLiteParameter("@w", netWeight));                 
                     cmd.Parameters.Add(new SQLiteParameter("@s", newStatus ?? (object)DBNull.Value));
-                    cmd.Parameters.Add(new SQLiteParameter("@n", note ?? ""));
+                    cmd.Parameters.Add(new SQLiteParameter("@n", noteEnc ?? ""));            
                     cmd.Parameters.Add(new SQLiteParameter("@no", orderNumber));
-
-
-
-                    //cmd.Parameters.AddWithValue("@w", netWeight);
-                    //cmd.Parameters.AddWithValue("@s", newStatus ?? (object)DBNull.Value);
-                    //cmd.Parameters.AddWithValue("@n", note ?? "");
-                    //cmd.Parameters.AddWithValue("@no", orderNumber);
                     cmd.ExecuteNonQuery();
                     return true;
                 }
