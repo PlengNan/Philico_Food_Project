@@ -43,6 +43,7 @@
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -120,7 +121,6 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
-            this.txtPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconRight")));
             this.txtPassword.Location = new System.Drawing.Point(424, 135);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPassword.Name = "txtPassword";
@@ -131,6 +131,7 @@
             this.txtPassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -251,12 +252,41 @@
             this.msg.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.msg.Text = null;
             // 
+            // guna2GradientButton3
+            // 
+            this.guna2GradientButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientButton3.Animated = true;
+            this.guna2GradientButton3.BorderColor = System.Drawing.Color.White;
+            this.guna2GradientButton3.BorderRadius = 4;
+            this.guna2GradientButton3.BorderThickness = 1;
+            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton3.FillColor = System.Drawing.Color.White;
+            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientButton3.FocusedColor = System.Drawing.Color.White;
+            this.guna2GradientButton3.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton3.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.guna2GradientButton3.HoverState.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.guna2GradientButton3.HoverState.FillColor2 = System.Drawing.Color.LightSteelBlue;
+            this.guna2GradientButton3.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton3.Image")));
+            this.guna2GradientButton3.Location = new System.Drawing.Point(617, 133);
+            this.guna2GradientButton3.Name = "guna2GradientButton3";
+            this.guna2GradientButton3.Size = new System.Drawing.Size(53, 40);
+            this.guna2GradientButton3.TabIndex = 9;
+            this.guna2GradientButton3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2GradientButton3_MouseDown);
+            this.guna2GradientButton3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.guna2GradientButton3_MouseUp);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(730, 347);
+            this.Controls.Add(this.guna2GradientButton3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.guna2GradientButton1);
@@ -298,5 +328,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2MessageDialog msg;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
     }
 }

@@ -16,6 +16,6 @@ namespace Project_philico_food.Models
         public string WeightType { get; set; }
         public string LicensePlate { get; set; }
         public string WeightEnc {  get; set; }
-        public int PrintNo { get; set; } = 1;
+        public int PrintNo { get; set; } 
     }
 }

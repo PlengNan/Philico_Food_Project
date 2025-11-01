@@ -88,5 +88,15 @@ namespace Project_philico_food.Pages
             frmUsers.ShowDialog();
             this.Show();
         }
+
+        private void frmMain_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

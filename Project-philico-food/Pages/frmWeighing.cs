@@ -79,6 +79,35 @@ namespace Project_philico_food.Pages
                     break;
             }
         }
+        private void LoadFirstWeightInfo(string orderNumber)
+        {
+            try
+            {
+                var detailRepo = new OrderDetailDb();
+                var details = detailRepo.GetByOrderNumber(orderNumber);
+
+                var inRec = details?
+                    .FirstOrDefault(d => aESEncryption.Decrypt(d.WeightType) == "IN");
+
+                if (inRec != null)
+                {
+                    lblWeightFirstWeight.Text = inRec.Weight.ToString();
+                    lblWeightFirstWeight.Visible = true; 
+                }
+                else
+                {
+                    lblWeightFirstWeight.Text = "0";
+                    lblWeightFirstWeight.Visible = false;
+                }
+            }
+            catch
+            {
+                lblWeightFirstWeight.Text = "0";
+                lblWeightFirstWeight.Visible = false;
+            }
+        }
+
+
 
         void updateUIDataComboboxProduct(List<ProductModel> lists, Guna2ComboBox cbb)
         {
@@ -95,15 +124,6 @@ namespace Project_philico_food.Pages
                     break;
             }
         }
-
-        void updateUIDataGridView(List<OrderModel> lists)
-        {
-            foreach (OrderModel item in lists)
-            {
-                //dgvFirstWeight.Rows.Add(null, decryptData(item.Id.ToString()), decryptData(item.OrderNumber), decryptData(item.LicensePlate), decryptData(item.);
-            }
-        }
-
         private void LoadFirstWeighGrid()
         {
             try
@@ -146,19 +166,6 @@ namespace Project_philico_food.Pages
                 return s;
             }
         }
-
-
-        //void getFirstWeight()
-        //{
-        //    OrderDb orderDb = new OrderDb();
-        //    List<OrderModel> lists = orderDb.getAllOrderByStatus("Process");
-        //    if (lists == null)
-        //        return;
-
-        //    dgvFirstWeight.Rows.Clear();
-        //    updateUIDataGridView(lists);
-        //}
-
         void getCustomer(Guna2ComboBox cbb)
         {
             CustomerDb customerDb = new CustomerDb();
@@ -196,10 +203,6 @@ namespace Project_philico_food.Pages
             LoadFirstWeighGrid();
             if (!scaleFunc.Connect(spScale))
             {
-                //msg.Parent = this;
-                //msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                //msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                //msg.Show("Error connect scale");
                 this.Close();
             }
         }
@@ -254,33 +257,6 @@ namespace Project_philico_food.Pages
             catch (ObjectDisposedException) {  }
             catch (InvalidOperationException) {  }
             
-            //string value = spScale.ReadLine();
-            //string _weight = scaleFunc.DataReceive(value);
-            //if (!int.TryParse(_weight, out newWeight))
-            //{
-            //    return;
-            //}
-
-            //BeginInvoke(new MethodInvoker(delegate ()
-            //{
-            //    lblWeight.Text = _weight.ToString();
-            //}));
-
-            //// ถ้าน้ำหนักแตกต่างจากน้ำหนักล่าสุด
-            //if (newWeight != lastWeight)
-            //{
-            //    lastWeight = newWeight;
-            //    BeginInvoke(new MethodInvoker(delegate ()
-            //    {
-            //        tmCheckWeight.Stop();
-            //        tmCheckWeight.Start();
-            //        btnSave.Enabled = false;
-            //        btnStausWeight.ForeColor = Color.FromArgb(243, 128, 0);
-            //        btnStausWeight.BorderColor = Color.FromArgb(243, 128, 0);
-            //        btnStausWeight.FillColor = Color.FromArgb(239, 250, 240);
-            //        btnStausWeight.Text = "Weighing.....".ToUpper();
-            //    }));
-            //}
         }
 
         private void tmCheckWeight_Tick(object sender, EventArgs e)
@@ -349,10 +325,11 @@ namespace Project_philico_food.Pages
                 txtLicense.Text = order.LicensePlate ?? "";
                 txtNote.Text = order.Note ?? "";
 
+                LoadFirstWeightInfo(orderNumber);
                 lblWeight.Text = dgvList.Rows[e.RowIndex].Cells["cl_wg"].Value?.ToString() ?? "0";
 
                 btnSave.Enabled = true;
-                btnStausWeight.Text = "READY TO WEIGH OUT";
+                btnStausWeight.Text = "READY TO WEIGH OUT"; 
             }
         }
 
@@ -518,29 +495,53 @@ namespace Project_philico_food.Pages
                 msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
                 msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                 msg.Show("Weight Out saved Successfully");
-                ResetWeighingInputs();
-            }
+                try
+                {
+                    var printModel = new OrderDetailModel
+                    {
+                        OrderNumber = orderNumber,
+                        PrintNo = 1
+                    };
+                    using (var f = new frmPrintRp(printModel))
+                    {
+                        f.StartPosition = FormStartPosition.CenterParent;
+                        f.ShowDialog(this);
+                    }
+                }
+                catch (Exception ex)
+                {
 
-            // refresh right grid (process list)
-            //getFirstWeight();
+                }
+
+                ResetWeighingInputs();
+                LoadFirstWeighGrid();
+
+            }
             ResetWeighingInputs();
             LoadFirstWeighGrid();
 
         }
+        void ClearCombo(Guna2ComboBox cbb)
+        {
+            cbb.SelectedIndex = -1;
+            cbb.Text = string.Empty;
+        }
+
         private void ResetWeighingInputs()
         {
-
             lblWeight.Text = "0";
-            newWeight = 0;
-            lastWeight = 0;
+            newWeight = lastWeight = 0;
 
-            if (cbbCusCode.Items.Count > 0) cbbCusCode.SelectedIndex = 0;
-            if (cbbCusName.Items.Count > 0) cbbCusName.SelectedIndex = 0;
-            if (cbbPrdCode.Items.Count > 0) cbbPrdCode.SelectedIndex = 0;
-            if (cbbPrdName.Items.Count > 0) cbbPrdName.SelectedIndex = 0;
+            ClearCombo(cbbCusCode);
+            ClearCombo(cbbCusName);
+            ClearCombo(cbbPrdCode);
+            ClearCombo(cbbPrdName);
 
-            txtLicense.Text = string.Empty;
-            txtNote.Text = string.Empty;
+            txtLicense.Text = "";
+            txtNote.Text = "";
+
+            lblWeightFirstWeight.Text = "0";
+            lblWeightFirstWeight.Visible = false;
 
             btnSave.Enabled = false;
 
@@ -630,6 +631,7 @@ namespace Project_philico_food.Pages
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
+
             var row = dgvList.Rows[e.RowIndex];
             string orderNumber = row.Cells["cl_orNum"].Value?.ToString();
             if (string.IsNullOrWhiteSpace(orderNumber)) return;
@@ -637,6 +639,7 @@ namespace Project_philico_food.Pages
             var orderRepo = new OrderDb();
             var order = orderRepo.getOrderByOrderNumberOrId(orderNumber);
             if (order == null) return;
+
 
             string cusName = SafeDec(order.CustomerName);
             string prdName = SafeDec(order.ProductName);
@@ -652,15 +655,11 @@ namespace Project_philico_food.Pages
             SelectInCombo(cbbPrdCode, product != null ? decryptData(product.ProductCode) : "");
             SelectInCombo(cbbPrdName, product != null ? decryptData(product.ProductName) : "");
 
-            //txtLicense.Text = order.LicensePlate ?? "";
-            //txtNote.Text = order.Note ?? "";
-
-
-            //cbbCusName.Text = cusName;
-            //cbbPrdName.Text = prdName;
             txtLicense.Text = plate;
             txtNote.Text = note;
             lblWeight.Text = row.Cells["cl_wg"].Value?.ToString() ?? "0";
+
+            LoadFirstWeightInfo(orderNumber);
 
             btnSave.Enabled = true;
             btnStausWeight.Text = "READY TO WEIGH OUT";

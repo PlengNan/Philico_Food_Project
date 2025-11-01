@@ -65,5 +65,15 @@ namespace Project_philico_food.Pages
                 this.Show();
             }
         }
+
+        private void guna2GradientButton3_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+        }
+
+        private void guna2GradientButton3_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+        }
     }
 }

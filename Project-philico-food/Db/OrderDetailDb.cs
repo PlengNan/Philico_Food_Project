@@ -33,13 +33,6 @@ namespace Project_philico_food.Db
                     cmd.Parameters.Add(new SQLiteParameter("@Timez", m.Timez));
                     cmd.Parameters.Add(new SQLiteParameter("@Weight", m.Weight));
                     cmd.Parameters.Add(new SQLiteParameter("@WeightType", m.WeightType));
-
-
-                    //cmd.Parameters.AddWithValue("@OrderNumber", m.OrderNumber);
-                    //cmd.Parameters.AddWithValue("@Datez", m.Datez);
-                    //cmd.Parameters.AddWithValue("@Timez", m.Timez);
-                    //cmd.Parameters.AddWithValue("@Weight", m.Weight);
-                    //cmd.Parameters.AddWithValue("@WeightType", m.WeightType);
                     cmd.ExecuteNonQuery();
                     return true;
                 }
@@ -55,7 +48,6 @@ namespace Project_philico_food.Db
                 const string sql = @"SELECT * FROM OrderDetail WHERE OrderNumber=@no ORDER BY Id ASC";
                 using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    //cmd.Parameters.AddWithValue("@no", orderNumber);
                     cmd.Parameters.Add(new SQLiteParameter("@no", orderNumber));
                     using (var da = new SQLiteDataAdapter(cmd))
                     {

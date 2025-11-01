@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReport));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.msg = new Guna.UI2.WinForms.Guna2MessageDialog();
@@ -48,13 +48,17 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbDate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txbCarId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbbProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txbOrNum = new Guna.UI2.WinForms.Guna2TextBox();
+            this.chbProduct = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.chbDate = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbbCus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.chbCus = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbbCarId = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.chbCarId = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.txbDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSerach = new Guna.UI2.WinForms.Guna2Button();
+            this.txbCarId = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cl_orNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_lcP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +74,8 @@
             this.btnSc = new Guna.UI2.WinForms.Guna2Button();
             this.btnPc = new Guna.UI2.WinForms.Guna2Button();
             this.btnCc = new Guna.UI2.WinForms.Guna2Button();
+            this.dtpFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnControl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -247,37 +253,167 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txbDate);
-            this.panel1.Controls.Add(this.txbCarId);
+            this.panel1.Controls.Add(this.dtpTo);
+            this.panel1.Controls.Add(this.dtpFrom);
+            this.panel1.Controls.Add(this.cbbProduct);
+            this.panel1.Controls.Add(this.chbProduct);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txbOrNum);
+            this.panel1.Controls.Add(this.chbDate);
+            this.panel1.Controls.Add(this.cbbCus);
+            this.panel1.Controls.Add(this.chbCus);
+            this.panel1.Controls.Add(this.cbbCarId);
+            this.panel1.Controls.Add(this.chbCarId);
             this.panel1.Controls.Add(this.btnSerach);
-            this.panel1.Location = new System.Drawing.Point(58, 105);
+            this.panel1.Location = new System.Drawing.Point(58, 113);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 86);
+            this.panel1.Size = new System.Drawing.Size(1059, 154);
             this.panel1.TabIndex = 32;
             // 
-            // label5
+            // cbbProduct
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Athiti", 12F);
-            this.label5.Location = new System.Drawing.Point(590, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 25);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Date";
+            this.cbbProduct.BackColor = System.Drawing.Color.Transparent;
+            this.cbbProduct.BorderRadius = 4;
+            this.cbbProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbProduct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbProduct.ItemHeight = 30;
+            this.cbbProduct.Location = new System.Drawing.Point(463, 102);
+            this.cbbProduct.Name = "cbbProduct";
+            this.cbbProduct.Size = new System.Drawing.Size(153, 36);
+            this.cbbProduct.TabIndex = 50;
+            this.cbbProduct.DropDown += new System.EventHandler(this.cbbProduct_DropDown);
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Athiti", 12F);
-            this.label4.Location = new System.Drawing.Point(421, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Car ID";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Athiti", 12F);
+            this.label3.Location = new System.Drawing.Point(819, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 25);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "To";
+            // 
+            // chbProduct
+            // 
+            this.chbProduct.Animated = true;
+            this.chbProduct.AutoSize = true;
+            this.chbProduct.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbProduct.CheckedState.BorderRadius = 3;
+            this.chbProduct.CheckedState.BorderThickness = 0;
+            this.chbProduct.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbProduct.Font = new System.Drawing.Font("Athiti", 12F);
+            this.chbProduct.Location = new System.Drawing.Point(463, 67);
+            this.chbProduct.Name = "chbProduct";
+            this.chbProduct.Size = new System.Drawing.Size(82, 29);
+            this.chbProduct.TabIndex = 46;
+            this.chbProduct.Tag = "product";
+            this.chbProduct.Text = "Product";
+            this.chbProduct.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbProduct.UncheckedState.BorderRadius = 3;
+            this.chbProduct.UncheckedState.BorderThickness = 0;
+            this.chbProduct.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbProduct.CheckedChanged += new System.EventHandler(this.chbProduct_CheckedChanged);
+            // 
+            // chbDate
+            // 
+            this.chbDate.Animated = true;
+            this.chbDate.AutoSize = true;
+            this.chbDate.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbDate.CheckedState.BorderRadius = 3;
+            this.chbDate.CheckedState.BorderThickness = 0;
+            this.chbDate.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbDate.Font = new System.Drawing.Font("Athiti", 12F);
+            this.chbDate.Location = new System.Drawing.Point(671, 67);
+            this.chbDate.Name = "chbDate";
+            this.chbDate.Size = new System.Drawing.Size(61, 29);
+            this.chbDate.TabIndex = 45;
+            this.chbDate.Tag = "date";
+            this.chbDate.Text = "Date";
+            this.chbDate.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbDate.UncheckedState.BorderRadius = 3;
+            this.chbDate.UncheckedState.BorderThickness = 0;
+            this.chbDate.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbDate.CheckedChanged += new System.EventHandler(this.chbProduct_CheckedChanged);
+            // 
+            // cbbCus
+            // 
+            this.cbbCus.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCus.BorderRadius = 4;
+            this.cbbCus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCus.ItemHeight = 30;
+            this.cbbCus.Location = new System.Drawing.Point(250, 102);
+            this.cbbCus.Name = "cbbCus";
+            this.cbbCus.Size = new System.Drawing.Size(153, 36);
+            this.cbbCus.TabIndex = 44;
+            this.cbbCus.DropDown += new System.EventHandler(this.cbbCus_DropDown);
+            // 
+            // chbCus
+            // 
+            this.chbCus.Animated = true;
+            this.chbCus.AutoSize = true;
+            this.chbCus.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbCus.CheckedState.BorderRadius = 3;
+            this.chbCus.CheckedState.BorderThickness = 0;
+            this.chbCus.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbCus.Font = new System.Drawing.Font("Athiti", 12F);
+            this.chbCus.Location = new System.Drawing.Point(250, 67);
+            this.chbCus.Name = "chbCus";
+            this.chbCus.Size = new System.Drawing.Size(96, 29);
+            this.chbCus.TabIndex = 42;
+            this.chbCus.Tag = "customer";
+            this.chbCus.Text = "Customer";
+            this.chbCus.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbCus.UncheckedState.BorderRadius = 3;
+            this.chbCus.UncheckedState.BorderThickness = 0;
+            this.chbCus.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbCus.CheckedChanged += new System.EventHandler(this.chbProduct_CheckedChanged);
+            // 
+            // cbbCarId
+            // 
+            this.cbbCarId.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCarId.BorderRadius = 4;
+            this.cbbCarId.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCarId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCarId.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCarId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCarId.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCarId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCarId.ItemHeight = 30;
+            this.cbbCarId.Location = new System.Drawing.Point(34, 102);
+            this.cbbCarId.Name = "cbbCarId";
+            this.cbbCarId.Size = new System.Drawing.Size(153, 36);
+            this.cbbCarId.TabIndex = 41;
+            this.cbbCarId.DropDown += new System.EventHandler(this.cbbCarId_DropDown);
+            this.cbbCarId.SelectedIndexChanged += new System.EventHandler(this.cbbCarId_SelectedIndexChanged);
+            // 
+            // chbCarId
+            // 
+            this.chbCarId.Animated = true;
+            this.chbCarId.AutoSize = true;
+            this.chbCarId.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbCarId.CheckedState.BorderRadius = 3;
+            this.chbCarId.CheckedState.BorderThickness = 0;
+            this.chbCarId.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbCarId.Font = new System.Drawing.Font("Athiti", 12F);
+            this.chbCarId.Location = new System.Drawing.Point(42, 67);
+            this.chbCarId.Name = "chbCarId";
+            this.chbCarId.Size = new System.Drawing.Size(70, 29);
+            this.chbCarId.TabIndex = 41;
+            this.chbCarId.Tag = "car";
+            this.chbCarId.Text = "Car Id";
+            this.chbCarId.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbCarId.UncheckedState.BorderRadius = 3;
+            this.chbCarId.UncheckedState.BorderThickness = 0;
+            this.chbCarId.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbCarId.CheckedChanged += new System.EventHandler(this.chbProduct_CheckedChanged);
             // 
             // txbDate
             // 
@@ -294,72 +430,14 @@
             this.txbDate.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbDate.ForeColor = System.Drawing.Color.Black;
             this.txbDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbDate.Location = new System.Drawing.Point(595, 33);
+            this.txbDate.Location = new System.Drawing.Point(783, 457);
             this.txbDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txbDate.Name = "txbDate";
             this.txbDate.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txbDate.PlaceholderText = "Date";
             this.txbDate.SelectedText = "";
-            this.txbDate.Size = new System.Drawing.Size(152, 40);
+            this.txbDate.Size = new System.Drawing.Size(110, 40);
             this.txbDate.TabIndex = 14;
-            // 
-            // txbCarId
-            // 
-            this.txbCarId.Animated = true;
-            this.txbCarId.BorderColor = System.Drawing.Color.Gray;
-            this.txbCarId.BorderRadius = 4;
-            this.txbCarId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbCarId.DefaultText = "";
-            this.txbCarId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbCarId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbCarId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbCarId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbCarId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbCarId.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCarId.ForeColor = System.Drawing.Color.Black;
-            this.txbCarId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbCarId.Location = new System.Drawing.Point(426, 33);
-            this.txbCarId.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txbCarId.Name = "txbCarId";
-            this.txbCarId.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txbCarId.PlaceholderText = "Car ID";
-            this.txbCarId.SelectedText = "";
-            this.txbCarId.Size = new System.Drawing.Size(152, 40);
-            this.txbCarId.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Athiti", 12F);
-            this.label3.Location = new System.Drawing.Point(252, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 25);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Order Number";
-            // 
-            // txbOrNum
-            // 
-            this.txbOrNum.Animated = true;
-            this.txbOrNum.BorderColor = System.Drawing.Color.Gray;
-            this.txbOrNum.BorderRadius = 4;
-            this.txbOrNum.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbOrNum.DefaultText = "";
-            this.txbOrNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbOrNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbOrNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbOrNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbOrNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbOrNum.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbOrNum.ForeColor = System.Drawing.Color.Black;
-            this.txbOrNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbOrNum.Location = new System.Drawing.Point(257, 34);
-            this.txbOrNum.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txbOrNum.Name = "txbOrNum";
-            this.txbOrNum.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txbOrNum.PlaceholderText = "Order Number";
-            this.txbOrNum.SelectedText = "";
-            this.txbOrNum.Size = new System.Drawing.Size(152, 40);
-            this.txbOrNum.TabIndex = 7;
             // 
             // btnSerach
             // 
@@ -376,30 +454,54 @@
             this.btnSerach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnSerach.Image = ((System.Drawing.Image)(resources.GetObject("btnSerach.Image")));
             this.btnSerach.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSerach.Location = new System.Drawing.Point(774, 29);
+            this.btnSerach.Location = new System.Drawing.Point(925, 20);
             this.btnSerach.Name = "btnSerach";
             this.btnSerach.Size = new System.Drawing.Size(118, 45);
             this.btnSerach.TabIndex = 10;
             this.btnSerach.Text = "Search";
             this.btnSerach.Click += new System.EventHandler(this.btnSerach_Click);
             // 
+            // txbCarId
+            // 
+            this.txbCarId.Animated = true;
+            this.txbCarId.BorderColor = System.Drawing.Color.Gray;
+            this.txbCarId.BorderRadius = 4;
+            this.txbCarId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbCarId.DefaultText = "";
+            this.txbCarId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbCarId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbCarId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbCarId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbCarId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbCarId.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCarId.ForeColor = System.Drawing.Color.Black;
+            this.txbCarId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbCarId.Location = new System.Drawing.Point(693, 388);
+            this.txbCarId.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txbCarId.Name = "txbCarId";
+            this.txbCarId.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txbCarId.PlaceholderText = "Car ID";
+            this.txbCarId.SelectedText = "";
+            this.txbCarId.Size = new System.Drawing.Size(152, 40);
+            this.txbCarId.TabIndex = 13;
+            // 
             // dgvList
             // 
             this.dgvList.AllowUserToAddRows = false;
             this.dgvList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgvList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Athiti", 14.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Athiti", 14.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvList.ColumnHeadersHeight = 40;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -412,31 +514,31 @@
             this.cl_wgO,
             this.cl_status,
             this.cl_print});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Athiti", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Athiti", 12F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvList.Location = new System.Drawing.Point(2, 197);
+            this.dgvList.Location = new System.Drawing.Point(58, 273);
             this.dgvList.Name = "dgvList";
             this.dgvList.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Athiti", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Athiti", 8.25F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvList.RowTemplate.Height = 30;
-            this.dgvList.Size = new System.Drawing.Size(1150, 566);
+            this.dgvList.Size = new System.Drawing.Size(1059, 474);
             this.dgvList.TabIndex = 33;
             this.dgvList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -536,7 +638,7 @@
             this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1058, 698);
+            this.btnNext.Location = new System.Drawing.Point(1033, 691);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 45);
             this.btnNext.TabIndex = 37;
@@ -558,7 +660,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBack.Location = new System.Drawing.Point(12, 698);
+            this.btnBack.Location = new System.Drawing.Point(69, 691);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 45);
             this.btnBack.TabIndex = 38;
@@ -580,7 +682,7 @@
             this.btnSc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnSc.Image = ((System.Drawing.Image)(resources.GetObject("btnSc.Image")));
             this.btnSc.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSc.Location = new System.Drawing.Point(318, 24);
+            this.btnSc.Location = new System.Drawing.Point(353, 24);
             this.btnSc.Name = "btnSc";
             this.btnSc.Size = new System.Drawing.Size(141, 60);
             this.btnSc.TabIndex = 34;
@@ -601,7 +703,7 @@
             this.btnPc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnPc.Image = ((System.Drawing.Image)(resources.GetObject("btnPc.Image")));
             this.btnPc.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPc.Location = new System.Drawing.Point(483, 24);
+            this.btnPc.Location = new System.Drawing.Point(516, 24);
             this.btnPc.Name = "btnPc";
             this.btnPc.Size = new System.Drawing.Size(141, 60);
             this.btnPc.TabIndex = 39;
@@ -622,11 +724,43 @@
             this.btnCc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnCc.Image = ((System.Drawing.Image)(resources.GetObject("btnCc.Image")));
             this.btnCc.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnCc.Location = new System.Drawing.Point(652, 24);
+            this.btnCc.Location = new System.Drawing.Point(678, 24);
             this.btnCc.Name = "btnCc";
             this.btnCc.Size = new System.Drawing.Size(141, 60);
             this.btnCc.TabIndex = 40;
             this.btnCc.Text = "Cancle";
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Checked = true;
+            this.dtpFrom.CustomFormat = " ";
+            this.dtpFrom.FillColor = System.Drawing.Color.White;
+            this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFrom.Location = new System.Drawing.Point(671, 102);
+            this.dtpFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(142, 36);
+            this.dtpFrom.TabIndex = 41;
+            this.dtpFrom.Value = new System.DateTime(2025, 10, 31, 11, 19, 32, 123);
+            this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Checked = true;
+            this.dtpTo.CustomFormat = " ";
+            this.dtpTo.FillColor = System.Drawing.Color.White;
+            this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTo.Location = new System.Drawing.Point(854, 102);
+            this.dtpTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(142, 36);
+            this.dtpTo.TabIndex = 51;
+            this.dtpTo.Value = new System.DateTime(2025, 10, 31, 11, 17, 23, 812);
+            this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
             // 
             // frmReport
             // 
@@ -634,14 +768,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1153, 759);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCc);
             this.Controls.Add(this.btnPc);
             this.Controls.Add(this.btnSc);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.dgvList);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txbCarId);
             this.Controls.Add(this.pnControl);
+            this.Controls.Add(this.txbDate);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2ControlBox1);
@@ -678,11 +814,7 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txbDate;
         private Guna.UI2.WinForms.Guna2TextBox txbCarId;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txbOrNum;
         private Guna.UI2.WinForms.Guna2Button btnSerach;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2DataGridView dgvList;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_orNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_lcP;
@@ -698,5 +830,15 @@
         private Guna.UI2.WinForms.Guna2Button btnSc;
         private Guna.UI2.WinForms.Guna2Button btnCc;
         private Guna.UI2.WinForms.Guna2Button btnPc;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCarId;
+        private Guna.UI2.WinForms.Guna2CheckBox chbCarId;
+        private Guna.UI2.WinForms.Guna2CheckBox chbCus;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCus;
+        private Guna.UI2.WinForms.Guna2CheckBox chbDate;
+        private Guna.UI2.WinForms.Guna2CheckBox chbProduct;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbProduct;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTo;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpFrom;
     }
 }

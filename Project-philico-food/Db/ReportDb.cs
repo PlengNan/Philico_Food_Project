@@ -15,6 +15,12 @@ namespace Project_philico_food.Db
         public string OrderNumber { get; set; }
         public string LicensePlate { get; set; }
         public string DatePrefix { get; set; }
+        public string ProductName { get; set; }
+        public string CustomerName { get; set; }
+        public List<string> DateList { get; set; }
+        public string DateFrom { get; set; }
+        public string DateTo { get; set; }
+
     }
 
     public class StatusProcess
@@ -40,18 +46,19 @@ namespace Project_philico_food.Db
                                             o.ProductName,
                                             o.NetWeight,
                                             COALESCE(
-                                                (SELECT dIN.Datez
-                                                   FROM OrderDetail dIN
-                                                  WHERE dIN.OrderNumber = o.OrderNumber AND dIN.WeightType = @wtIn
-                                                  ORDER BY dIN.Id DESC
-                                                  LIMIT 1),
-                                                (SELECT dOUT.Datez
-                                                   FROM OrderDetail dOUT
-                                                  WHERE dOUT.OrderNumber = o.OrderNumber AND dOUT.WeightType = @wtOut
-                                                  ORDER BY dOUT.Id DESC
-                                                  LIMIT 1),
-                                                ''
-                                            ) AS Datez,
+                                                 (SELECT dIN.Datez
+                                                    FROM OrderDetail dIN
+                                                   WHERE dIN.OrderNumber = o.OrderNumber AND dIN.WeightType = @wtIn
+                                                   ORDER BY dIN.Id DESC
+                                                   LIMIT 1),
+                                                 (SELECT dOUT.Datez
+                                                    FROM OrderDetail dOUT
+                                                   WHERE dOUT.OrderNumber = o.OrderNumber AND dOUT.WeightType = @wtOut
+                                                   ORDER BY dOUT.Id DESC
+                                                   LIMIT 1),
+                                                 ''
+                                             ) AS Datez,
+                                            
                                             COALESCE((
                                                 SELECT dIN.Weight
                                                   FROM OrderDetail dIN
@@ -69,37 +76,78 @@ namespace Project_philico_food.Db
                                             o.Status
                                         FROM Orders o
                                     ";
-
+        
+        public List<string> GetDistinctEncrypted(string column)
+        {
+            var list = new List<string>();
+            string sql = $@"
+                            SELECT DISTINCT {column}
+                            FROM Orders
+                            WHERE {column} IS NOT NULL AND {column} <> ''
+                            ORDER BY {column};";
+            using (var cmd = new SQLiteCommand(sql, _con))
+            using (var rd = cmd.ExecuteReader())
+            {
+                while (rd.Read())
+                {
+                    var v = rd[column]?.ToString();
+                    if (!string.IsNullOrWhiteSpace(v)) list.Add(v);
+                }
+            }
+            return list;
+        }
         private void SearchWhere(ReportFilter f, out string whereSql, out SQLiteParameter[] whereParams)
         {
             var where = new List<string>();
             var ps = new List<SQLiteParameter>();
-
-
-            if (!string.IsNullOrWhiteSpace(f?.OrderNumber))
-            {
-                where.Add("o.OrderNumber LIKE @ord");
-                ps.Add(new SQLiteParameter("@ord", "%" + f.OrderNumber.Trim() + "%"));
-            }
 
             if (!string.IsNullOrWhiteSpace(f?.LicensePlate))
             {
                 where.Add("o.LicensePlate = @car");
                 ps.Add(new SQLiteParameter("@car", f.LicensePlate));
             }
-
-            if (!string.IsNullOrWhiteSpace(f?.DatePrefix))
+            if (!string.IsNullOrWhiteSpace(f?.CustomerName))
             {
-                where.Add(@"
-            EXISTS (
-                SELECT 1
-                  FROM OrderDetail d
-                 WHERE d.OrderNumber = o.OrderNumber
-                   AND d.Datez = @date
-            )");
-                ps.Add(new SQLiteParameter("@date", f.DatePrefix));
+                where.Add("o.CustomerName = @cus");
+                ps.Add(new SQLiteParameter("@cus", f.CustomerName));
+            }
+            if (!string.IsNullOrWhiteSpace(f?.ProductName))
+            {
+                where.Add("o.ProductName = @pro");
+                ps.Add(new SQLiteParameter("@pro", f.ProductName));
             }
 
+            //if (!string.IsNullOrWhiteSpace(f?.DatePrefix))
+            //{
+            //    where.Add(@"
+            //            EXISTS (
+            //                SELECT 1 FROM OrderDetail d
+            //                WHERE d.OrderNumber = o.OrderNumber
+            //                  AND d.Datez = @date
+            //            )");
+            //    ps.Add(new SQLiteParameter("@date", f.DatePrefix));
+            //}
+
+            if (f?.DateList != null && f.DateList.Count > 0)
+            {
+                var names = new List<string>();
+                for (int i = 0; i < f.DateList.Count; i++)
+                {
+                    string p = "@d" + i;
+                    names.Add(p);
+                    ps.Add(new SQLiteParameter(p, f.DateList[i]));
+                }
+
+                where.Add($@"
+                        EXISTS (
+                            SELECT 1
+                            FROM OrderDetail d
+                            WHERE d.OrderNumber = o.OrderNumber
+                              AND d.Datez IN ({string.Join(",", names)})
+                        )");
+             }
+
+            
             whereSql = where.Count > 0 ? " WHERE " + string.Join(" AND ", where) : "";
             whereParams = ps.ToArray();
         }
@@ -139,12 +187,12 @@ namespace Project_philico_food.Db
             }
         }
         string whereToday = @"
-        EXISTS (
-            SELECT 1
-            FROM OrderDetail d
-            WHERE d.OrderNumber = o.OrderNumber
-              AND d.Datez LIKE @today || '%'
-        )";
+                            EXISTS (
+                                SELECT 1
+                                FROM OrderDetail d
+                                WHERE d.OrderNumber = o.OrderNumber
+                                  AND d.Datez LIKE @today || '%'
+                            )";
         string todayPrefix = DateTime.Now.ToString("yyyy-MM-dd", CultureInfo.CreateSpecificCulture("en-US"));
         public DataTable GetTodayReportPage(ReportFilter filter, int page, int pageSize)
         {
@@ -254,10 +302,6 @@ namespace Project_philico_food.Db
             }
         }
 
-
-
-
-
         public DataTable GetTicketTable(string orderNumber)
         {
             const string SQL = @"
@@ -267,20 +311,19 @@ namespace Project_philico_food.Db
                                     o.CustomerName,
                                     o.ProductName,
                                     'IN'  AS WeightType,
-                                    'Weight In' AS Detail,
+                                    'Weight In'  AS Detail,
                                     (SELECT d.Datez  FROM OrderDetail d 
                                       WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtIn
-                                      ORDER BY d.Id DESC LIMIT 1) AS Datez,
+                                      ORDER BY d.Id DESC LIMIT 1) AS DateIn,
                                     (SELECT d.Timez  FROM OrderDetail d 
                                       WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtIn
-                                      ORDER BY d.Id DESC LIMIT 1) AS Timez,
+                                      ORDER BY d.Id DESC LIMIT 1) AS TimeIn,
                                     (SELECT d.Weight FROM OrderDetail d 
                                       WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtIn
                                       ORDER BY d.Id DESC LIMIT 1) AS WeightIn,
+                                    NULL AS DateOut,
+                                    NULL AS TimeOut,
                                     NULL AS WeightOut,
-                                    (SELECT d.Weight FROM OrderDetail d 
-                                      WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtIn
-                                      ORDER BY d.Id DESC LIMIT 1) AS WeightValue,   
                                     o.NetWeight
                                 FROM Orders o
                                 WHERE o.OrderNumber = @ord
@@ -294,24 +337,23 @@ namespace Project_philico_food.Db
                                     o.ProductName,
                                     'OUT' AS WeightType,
                                     'Weight Out' AS Detail,
+                                    NULL AS DateIn,
+                                    NULL AS TimeIn,
+                                    NULL AS WeightIn,
                                     (SELECT d.Datez  FROM OrderDetail d 
                                       WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtOut
-                                      ORDER BY d.Id DESC LIMIT 1) AS Datez,
+                                      ORDER BY d.Id DESC LIMIT 1) AS DateOut,
                                     (SELECT d.Timez  FROM OrderDetail d 
                                       WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtOut
-                                      ORDER BY d.Id DESC LIMIT 1) AS Timez,
-                                    NULL AS WeightIn,
+                                      ORDER BY d.Id DESC LIMIT 1) AS TimeOut,
                                     (SELECT d.Weight FROM OrderDetail d 
                                       WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtOut
                                       ORDER BY d.Id DESC LIMIT 1) AS WeightOut,
-                                    (SELECT d.Weight FROM OrderDetail d 
-                                      WHERE d.OrderNumber = o.OrderNumber AND d.WeightType = @wtOut
-                                      ORDER BY d.Id DESC LIMIT 1) AS WeightValue,   -- << ใช้ bind ช่อง Weight เดียวใน RDLC
                                     o.NetWeight
                                 FROM Orders o
                                 WHERE o.OrderNumber = @ord
 
-                                ORDER BY CASE WHEN WeightType='IN' THEN 0 ELSE 1 END;
+                                ORDER BY WeightType ASC;
                             ";
 
             using (var da = new SQLiteDataAdapter(SQL, _con))
@@ -324,18 +366,28 @@ namespace Project_philico_food.Db
                 var dt = new DataTable("dsTicket");
                 da.Fill(dt);
 
+                string Dec(object v)
+                {
+                    var s = v?.ToString();
+                    if (string.IsNullOrEmpty(s)) return "";
+                    try { return aes.Decrypt(s); } catch { return s; }
+                }
+
                 foreach (DataRow r in dt.Rows)
                 {
-                    r["LicensePlate"] = aes.Decrypt(r["LicensePlate"]?.ToString() ?? "");
-                    r["CustomerName"] = aes.Decrypt(r["CustomerName"]?.ToString() ?? "");
-                    r["ProductName"] = aes.Decrypt(r["ProductName"]?.ToString() ?? "");
+                    r["LicensePlate"] = Dec(r["LicensePlate"]);
+                    r["CustomerName"] = Dec(r["CustomerName"]);
+                    r["ProductName"] = Dec(r["ProductName"]);
+
+                    r["DateIn"] = Dec(r["DateIn"]);
+                    r["TimeIn"] = Dec(r["TimeIn"]);
+                    r["DateOut"] = Dec(r["DateOut"]);
+                    r["TimeOut"] = Dec(r["TimeOut"]);
                 }
+
                 return dt;
             }
         }
-
-
-
 
 
     }

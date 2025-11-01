@@ -1,5 +1,6 @@
 ﻿using Project_philico_food.Db;
 using Project_philico_food.functions;
+using Project_philico_food.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -108,6 +109,46 @@ namespace Project_philico_food.Pages
         private void btnTtW_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            if (dgvList.Columns[e.ColumnIndex].Name != "cl_print") return;
+
+            string orderNumber = dgvList.Rows[e.RowIndex].Cells["cl_orNum"]?.Value?.ToString();
+            if (string.IsNullOrWhiteSpace(orderNumber))
+            {
+                msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                msg.Show("Order number not found.");
+                return;
+            }
+
+            try
+            {
+                var orderRepo = new OrderDb();
+                int currentNo = orderRepo.getCurrentPrintNo(orderNumber);
+                int previewNo = currentNo + 1;
+
+
+                var printModel = new OrderDetailModel
+                {
+                    OrderNumber = orderNumber,
+                    PrintNo = previewNo
+                };
+
+
+                using (var f = new frmPrintRp(printModel))
+                {
+                    f.StartPosition = FormStartPosition.CenterParent;
+                    f.ShowDialog(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                msg.Show("Printing failed: " + ex.Message);
+            }
         }
     }
 }

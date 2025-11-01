@@ -39,11 +39,6 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.cl_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_customerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cl_delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtSearchCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
             this.gbList = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -60,6 +55,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pnControl = new System.Windows.Forms.Panel();
             this.msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.cl_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_customerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cl_delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gbList.SuspendLayout();
@@ -158,7 +158,7 @@
             this.dgvList.ReadOnly = true;
             this.dgvList.RowHeadersVisible = false;
             this.dgvList.RowTemplate.Height = 30;
-            this.dgvList.Size = new System.Drawing.Size(1040, 604);
+            this.dgvList.Size = new System.Drawing.Size(1046, 604);
             this.dgvList.TabIndex = 6;
             this.dgvList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -182,46 +182,6 @@
             this.dgvList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
-            // 
-            // cl_id
-            // 
-            this.cl_id.HeaderText = "Id";
-            this.cl_id.Name = "cl_id";
-            this.cl_id.ReadOnly = true;
-            this.cl_id.Visible = false;
-            this.cl_id.Width = 350;
-            // 
-            // cl_customerCode
-            // 
-            this.cl_customerCode.HeaderText = "Customer Code";
-            this.cl_customerCode.Name = "cl_customerCode";
-            this.cl_customerCode.ReadOnly = true;
-            this.cl_customerCode.Width = 200;
-            // 
-            // cl_customerName
-            // 
-            this.cl_customerName.HeaderText = "Customer Name";
-            this.cl_customerName.Name = "cl_customerName";
-            this.cl_customerName.ReadOnly = true;
-            this.cl_customerName.Width = 600;
-            // 
-            // cl_edit
-            // 
-            this.cl_edit.HeaderText = "";
-            this.cl_edit.Name = "cl_edit";
-            this.cl_edit.ReadOnly = true;
-            this.cl_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cl_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cl_edit.Text = "Edit";
-            this.cl_edit.UseColumnTextForButtonValue = true;
-            // 
-            // cl_delete
-            // 
-            this.cl_delete.HeaderText = "";
-            this.cl_delete.Name = "cl_delete";
-            this.cl_delete.ReadOnly = true;
-            this.cl_delete.Text = "Delete";
-            this.cl_delete.UseColumnTextForButtonValue = true;
             // 
             // txtSearchCode
             // 
@@ -279,10 +239,10 @@
             this.gbList.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.gbList.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbList.ForeColor = System.Drawing.Color.White;
-            this.gbList.Location = new System.Drawing.Point(12, 199);
+            this.gbList.Location = new System.Drawing.Point(6, 199);
             this.gbList.Name = "gbList";
             this.gbList.Padding = new System.Windows.Forms.Padding(5);
-            this.gbList.Size = new System.Drawing.Size(1050, 654);
+            this.gbList.Size = new System.Drawing.Size(1056, 654);
             this.gbList.TabIndex = 9;
             this.gbList.Text = "Customer information";
             // 
@@ -299,7 +259,7 @@
             this.gbInfor.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.gbInfor.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfor.ForeColor = System.Drawing.Color.White;
-            this.gbInfor.Location = new System.Drawing.Point(524, 74);
+            this.gbInfor.Location = new System.Drawing.Point(390, 94);
             this.gbInfor.Name = "gbInfor";
             this.gbInfor.Padding = new System.Windows.Forms.Padding(5);
             this.gbInfor.Size = new System.Drawing.Size(455, 258);
@@ -503,6 +463,48 @@
             this.msg.Parent = this;
             this.msg.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.msg.Text = null;
+            // 
+            // cl_id
+            // 
+            this.cl_id.HeaderText = "Id";
+            this.cl_id.Name = "cl_id";
+            this.cl_id.ReadOnly = true;
+            this.cl_id.Visible = false;
+            this.cl_id.Width = 350;
+            // 
+            // cl_customerCode
+            // 
+            this.cl_customerCode.HeaderText = "Customer Code";
+            this.cl_customerCode.Name = "cl_customerCode";
+            this.cl_customerCode.ReadOnly = true;
+            this.cl_customerCode.Width = 200;
+            // 
+            // cl_customerName
+            // 
+            this.cl_customerName.HeaderText = "Customer Name";
+            this.cl_customerName.Name = "cl_customerName";
+            this.cl_customerName.ReadOnly = true;
+            this.cl_customerName.Width = 600;
+            // 
+            // cl_edit
+            // 
+            this.cl_edit.HeaderText = "";
+            this.cl_edit.Name = "cl_edit";
+            this.cl_edit.ReadOnly = true;
+            this.cl_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cl_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cl_edit.Text = "Edit";
+            this.cl_edit.UseColumnTextForButtonValue = true;
+            this.cl_edit.Width = 120;
+            // 
+            // cl_delete
+            // 
+            this.cl_delete.HeaderText = "";
+            this.cl_delete.Name = "cl_delete";
+            this.cl_delete.ReadOnly = true;
+            this.cl_delete.Text = "Delete";
+            this.cl_delete.UseColumnTextForButtonValue = true;
+            this.cl_delete.Width = 120;
             // 
             // frmCustomer
             // 

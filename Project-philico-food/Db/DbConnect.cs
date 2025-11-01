@@ -32,7 +32,6 @@ namespace Project_philico_food.Db
         }
         private static void EnsureSchema()
         {
-            // Users Table
             using (var cmd = new SQLiteCommand(@"
                 CREATE TABLE IF NOT EXISTS Users(
                     Id        INTEGER PRIMARY KEY AUTOINCREMENT,

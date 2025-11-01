@@ -9,10 +9,10 @@
             <Source>Embedded</Source>
             <Value>Screenshot202509120918561</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.22585cm</Top>
-            <Left>5.65481cm</Left>
-            <Height>2.70757cm</Height>
-            <Width>18.30493cm</Width>
+            <Top>0.37042cm</Top>
+            <Left>2.81523cm</Left>
+            <Height>2.57528cm</Height>
+            <Width>14.25922cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -26,10 +26,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>PHIVIDEC INDUDTRIAL ESTATE - ECONOMIC ZONE</Value>
+                    <Value>PHIVIDEC INDUSTRIAL ESTATE - ECONOMIC ZONE</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanaupc</FontFamily>
+                      <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -41,10 +41,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Tagoloan - Malitbog Rd., Brgv Mohon, Tagoloan, Misamis Oriental 9001</Value>
+                    <Value>Tagoloan - Malitbog Rd., Brgv.Mohon, Tagoloan, Misamis Oriental 9001</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanaupc</FontFamily>
+                      <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -58,8 +58,8 @@
                   <TextRun>
                     <Value>0936 820 8155 / Philco.admin@philcofood.com</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanaupc</FontFamily>
+                      <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -70,10 +70,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>2.79231cm</Top>
-            <Left>7.45807cm</Left>
-            <Height>2.24896cm</Height>
-            <Width>15.08125cm</Width>
+            <Top>2.19287cm</Top>
+            <Left>2.68112cm</Left>
+            <Height>2.06374cm</Height>
+            <Width>14.71083cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -92,30 +92,34 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>NO</Value>
+                    <Value>ลำดับที่/NO :</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                   <TextRun>
                     <Value xml:space="preserve">  </Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>angsanaupc</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!OrderNumber.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>angsanaupc</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>4.92662cm</Top>
-            <Left>5.65481cm</Left>
+            <Top>4.29189cm</Top>
+            <Left>4.05165cm</Left>
             <Height>0.81167cm</Height>
-            <Width>5.59562cm</Width>
+            <Width>6.25711cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -134,9 +138,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Supplier Name </Value>
+                    <Value>ชื่อบริษัท/Supplier Name   : </Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -144,7 +148,7 @@
                   <TextRun>
                     <Value>=Parameters!CustomerName.Value</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
@@ -154,10 +158,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>5.91467cm</Top>
-            <Left>5.65481cm</Left>
+            <Top>4.78579cm</Top>
+            <Left>2.34778cm</Left>
             <Height>0.81167cm</Height>
-            <Width>5.59563cm</Width>
+            <Width>7.96098cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -176,9 +180,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Car ID </Value>
+                    <Value>ทะเบียนรถ/License Plate : </Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -186,7 +190,7 @@
                   <TextRun>
                     <Value>=Parameters!LicensePlate.Value</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
@@ -196,10 +200,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>4.92661cm</Top>
-            <Left>17.53383cm</Left>
+            <Top>4.25661cm</Top>
+            <Left>11.09369cm</Left>
             <Height>0.81167cm</Height>
-            <Width>5.59563cm</Width>
+            <Width>7.56828cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -218,9 +222,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Product Name </Value>
+                    <Value>ชื่อสินค้า/Product Name   : </Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -228,7 +232,7 @@
                   <TextRun>
                     <Value>=Parameters!ProductName.Value</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
@@ -238,10 +242,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>5.91467cm</Top>
-            <Left>17.53383cm</Left>
+            <Top>4.78579cm</Top>
+            <Left>11.0937cm</Left>
             <Height>0.81167cm</Height>
-            <Width>5.59563cm</Width>
+            <Width>7.56827cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -260,11 +264,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Details</Value>
+                    <Value>รายการ/Lists</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanauPC</FontFamily>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -277,10 +281,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>6.76161cm</Top>
-            <Left>3.35705cm</Left>
+            <Top>5.66797cm</Top>
+            <Left>0.7404cm</Left>
             <Height>0.86458cm</Height>
-            <Width>3.47896cm</Width>
+            <Width>4.00813cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -299,11 +303,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Car ID</Value>
+                    <Value>ทะเบียนรถ/License Plate</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanauPC</FontFamily>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -316,10 +320,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>6.76162cm</Top>
-            <Left>6.83601cm</Left>
+            <Top>5.66799cm</Top>
+            <Left>4.74852cm</Left>
             <Height>0.86458cm</Height>
-            <Width>5.52569cm</Width>
+            <Width>3.89287cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -338,11 +342,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Date</Value>
+                    <Value>วันที่/Date</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanauPC</FontFamily>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -355,10 +359,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>6.76162cm</Top>
-            <Left>12.36171cm</Left>
+            <Top>5.66796cm</Top>
+            <Left>8.64139cm</Left>
             <Height>0.86458cm</Height>
-            <Width>4.90771cm</Width>
+            <Width>3.01215cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -377,11 +381,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Time</Value>
+                    <Value>เวลา/Time</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanauPC</FontFamily>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -394,10 +398,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>6.76161cm</Top>
-            <Left>17.26941cm</Left>
+            <Top>5.66796cm</Top>
+            <Left>11.65353cm</Left>
             <Height>0.86458cm</Height>
-            <Width>4.90771cm</Width>
+            <Width>3.01215cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -416,11 +420,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Weight (Kg)</Value>
+                    <Value>น้ำหนัก(กก.)/Weight (Kg)</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanauPC</FontFamily>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -433,10 +437,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>6.76162cm</Top>
-            <Left>22.17712cm</Left>
+            <Top>5.66797cm</Top>
+            <Left>14.66567cm</Left>
             <Height>0.86458cm</Height>
-            <Width>5.41042cm</Width>
+            <Width>5.02299cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -455,11 +459,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!WeightType.Value</Value>
+                    <Value>น้ำหนักชั่งเข้า/Weight In</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanauPC</FontFamily>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -472,10 +476,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>7.62618cm</Top>
-            <Left>3.35704cm</Left>
+            <Top>6.53254cm</Top>
+            <Left>0.74039cm</Left>
             <Height>0.86458cm</Height>
-            <Width>3.47896cm</Width>
+            <Width>4.00813cm</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -494,10 +498,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!LicensePlate.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -511,10 +515,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>7.62619cm</Top>
-            <Left>6.836cm</Left>
+            <Top>6.53256cm</Top>
+            <Left>4.74851cm</Left>
             <Height>0.86458cm</Height>
-            <Width>5.52569cm</Width>
+            <Width>3.89287cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -533,10 +537,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!DateIn.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -550,10 +554,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>7.62619cm</Top>
-            <Left>12.3617cm</Left>
+            <Top>6.53253cm</Top>
+            <Left>8.64139cm</Left>
             <Height>0.86458cm</Height>
-            <Width>4.90771cm</Width>
+            <Width>3.01215cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -572,10 +576,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!TimeIn.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -589,10 +593,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>7.62618cm</Top>
-            <Left>17.2694cm</Left>
+            <Top>6.53253cm</Top>
+            <Left>11.65352cm</Left>
             <Height>0.86458cm</Height>
-            <Width>4.90771cm</Width>
+            <Width>3.01215cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -611,10 +615,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!WeightIn.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -623,15 +627,15 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>7.62619cm</Top>
-            <Left>22.17711cm</Left>
+            <Top>6.53254cm</Top>
+            <Left>14.66566cm</Left>
             <Height>0.86458cm</Height>
-            <Width>5.41042cm</Width>
+            <Width>5.02299cm</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
@@ -650,11 +654,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!WeightType.Value</Value>
+                    <Value>น้ำหนักชั่งออก/Weight Out</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanauPC</FontFamily>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -667,10 +671,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>8.49077cm</Top>
-            <Left>3.35704cm</Left>
+            <Top>7.39713cm</Top>
+            <Left>0.74039cm</Left>
             <Height>0.86458cm</Height>
-            <Width>3.47896cm</Width>
+            <Width>4.00813cm</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
@@ -689,10 +693,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!LicensePlate.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -706,10 +710,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>8.49078cm</Top>
-            <Left>6.836cm</Left>
+            <Top>7.39715cm</Top>
+            <Left>4.74851cm</Left>
             <Height>0.86458cm</Height>
-            <Width>5.52569cm</Width>
+            <Width>3.89287cm</Width>
             <ZIndex>17</ZIndex>
             <Style>
               <Border>
@@ -728,10 +732,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!DateOut.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -745,10 +749,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>8.49078cm</Top>
-            <Left>12.3617cm</Left>
+            <Top>7.39712cm</Top>
+            <Left>8.64138cm</Left>
             <Height>0.86458cm</Height>
-            <Width>4.90771cm</Width>
+            <Width>3.01215cm</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -767,10 +771,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!TimeOut.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -784,10 +788,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>8.49077cm</Top>
-            <Left>17.2694cm</Left>
+            <Top>7.39712cm</Top>
+            <Left>11.65352cm</Left>
             <Height>0.86458cm</Height>
-            <Width>4.90771cm</Width>
+            <Width>3.01215cm</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
@@ -806,10 +810,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!WeightOut.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanauPC</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -818,15 +822,15 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>8.49078cm</Top>
-            <Left>22.17711cm</Left>
+            <Top>7.39711cm</Top>
+            <Left>14.66566cm</Left>
             <Height>0.86458cm</Height>
-            <Width>5.41042cm</Width>
+            <Width>5.02299cm</Width>
             <ZIndex>20</ZIndex>
             <Style>
               <Border>
@@ -845,10 +849,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Parameters!NetWeight.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -857,15 +861,15 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>9.35536cm</Top>
-            <Left>22.17712cm</Left>
+            <Top>8.26169cm</Top>
+            <Left>14.66568cm</Left>
             <Height>0.86458cm</Height>
-            <Width>5.41042cm</Width>
+            <Width>5.02299cm</Width>
             <ZIndex>21</ZIndex>
             <Style>
               <Border>
@@ -884,9 +888,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Note : </Value>
+                    <Value>หมายเหตุ/Remark : </Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -894,7 +898,7 @@
                   <TextRun>
                     <Value>=Parameters!Note.Value</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
@@ -904,10 +908,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>10.32578cm</Top>
-            <Left>3.35704cm</Left>
-            <Height>0.83813cm</Height>
-            <Width>24.23048cm</Width>
+            <Top>9.21451cm</Top>
+            <Left>0.74037cm</Left>
+            <Height>1.4205cm</Height>
+            <Width>18.94828cm</Width>
             <ZIndex>22</ZIndex>
             <Style>
               <Border>
@@ -926,9 +930,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Weighing Office ...................................</Value>
+                    <Value>Weighing Officer...............................................................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -938,10 +942,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>11.34029cm</Top>
-            <Left>10.69482cm</Left>
-            <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Top>10.74084cm</Top>
+            <Left>2.81523cm</Left>
+            <Height>0.70584cm</Height>
+            <Width>8.10207cm</Width>
             <ZIndex>23</ZIndex>
             <Style>
               <Border>
@@ -960,9 +964,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Date ................/................/................</Value>
+                    <Value>Date .........................../............................../.........................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -972,10 +976,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>12.15196cm</Top>
-            <Left>10.69482cm</Left>
+            <Top>11.34083cm</Top>
+            <Left>2.81523cm</Left>
             <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Width>8.10207cm</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
@@ -994,9 +998,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Date ................/................/................</Value>
+                    <Value>Date ............................/............................./...........................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -1006,10 +1010,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>12.15197cm</Top>
-            <Left>19.70341cm</Left>
+            <Top>11.34084cm</Top>
+            <Left>11.09369cm</Left>
             <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Width>8.59498cm</Width>
             <ZIndex>25</ZIndex>
             <Style>
               <Border>
@@ -1028,9 +1032,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Driver .................................................</Value>
+                    <Value>Driver ....................................................................................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -1040,10 +1044,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>11.3403cm</Top>
-            <Left>19.70341cm</Left>
+            <Top>10.70557cm</Top>
+            <Left>11.09369cm</Left>
             <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Width>8.59498cm</Width>
             <ZIndex>26</ZIndex>
             <Style>
               <Border>
@@ -1062,9 +1066,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Date ................/................/................</Value>
+                    <Value>Date ........................./............................../...........................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -1074,10 +1078,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>14.24273cm</Top>
-            <Left>10.69482cm</Left>
+            <Top>12.51439cm</Top>
+            <Left>2.81523cm</Left>
             <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Width>8.10207cm</Width>
             <ZIndex>27</ZIndex>
             <Style>
               <Border>
@@ -1096,9 +1100,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Sender ...............................................</Value>
+                    <Value>Sender ................................................................................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -1108,10 +1112,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>13.43106cm</Top>
-            <Left>10.69482cm</Left>
+            <Top>11.9673cm</Top>
+            <Left>2.81523cm</Left>
             <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Width>8.10207cm</Width>
             <ZIndex>28</ZIndex>
             <Style>
               <Border>
@@ -1130,9 +1134,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Date ................/................/................</Value>
+                    <Value>Date ............................/............................./............................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -1142,10 +1146,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>14.12808cm</Top>
-            <Left>19.70341cm</Left>
+            <Top>12.51439cm</Top>
+            <Left>11.09369cm</Left>
             <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Width>8.59498cm</Width>
             <ZIndex>29</ZIndex>
             <Style>
               <Border>
@@ -1167,7 +1171,7 @@
                     <Value>Receiver</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -1175,9 +1179,9 @@
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value> .............................................</Value>
+                    <Value> ................................................................................</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -1187,10 +1191,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>13.31641cm</Top>
-            <Left>19.70341cm</Left>
+            <Top>11.9673cm</Top>
+            <Left>11.09369cm</Left>
             <Height>0.81167cm</Height>
-            <Width>8.45312cm</Width>
+            <Width>8.59498cm</Width>
             <ZIndex>30</ZIndex>
             <Style>
               <Border>
@@ -1209,18 +1213,16 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Print No: </Value>
+                    <Value>พิมพ์ครั้งที่/Printed No: </Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!PrintNo.Value</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1229,10 +1231,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>0.22585cm</Top>
-            <Left>25.63008cm</Left>
-            <Height>0.81167cm</Height>
-            <Width>4.19333cm</Width>
+            <Top>0.37042cm</Top>
+            <Left>16.70876cm</Left>
+            <Height>0.65292cm</Height>
+            <Width>3.61124cm</Width>
             <ZIndex>31</ZIndex>
             <Style>
               <Border>
@@ -1251,9 +1253,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>NET WEIGHT</Value>
+                    <Value>น้ำหนักสุทธิ/Net Weight(Kg)</Value>
                     <Style>
-                      <FontFamily>Athiti</FontFamily>
+                      <FontFamily>angsanaupc</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -1263,10 +1265,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>9.42591cm</Top>
-            <Left>18.83046cm</Left>
+            <Top>8.29699cm</Top>
+            <Left>11.0937cm</Left>
             <Height>0.81167cm</Height>
-            <Width>3.34666cm</Width>
+            <Width>3.57198cm</Width>
             <ZIndex>32</ZIndex>
             <Style>
               <Border>
@@ -1278,19 +1280,51 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox40">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ID card number    : </Value>
+                    <Style>
+                      <FontFamily>angsanaupc</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox11</rd:DefaultName>
+            <Top>8.29701cm</Top>
+            <Left>0.7404cm</Left>
+            <Height>0.81167cm</Height>
+            <Width>9.56836cm</Width>
+            <ZIndex>33</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>5.92693in</Height>
+        <Height>5.5in</Height>
         <Style />
       </Body>
-      <Width>11.7415in</Width>
+      <Width>8in</Width>
       <Page>
-        <PageHeight>14.5cm</PageHeight>
-        <PageWidth>23.5cm</PageWidth>
-        <LeftMargin>2cm</LeftMargin>
-        <RightMargin>2cm</RightMargin>
-        <TopMargin>2cm</TopMargin>
-        <BottomMargin>2cm</BottomMargin>
-        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <PageHeight>5.5in</PageHeight>
+        <PageWidth>8in</PageWidth>
+        <InteractiveHeight>5.5in</InteractiveHeight>
+        <InteractiveWidth>8.5in</InteractiveWidth>
+        <ColumnSpacing>0.05118in</ColumnSpacing>
         <Style />
       </Page>
     </ReportSection>
@@ -1298,58 +1332,80 @@
   <ReportParameters>
     <ReportParameter Name="OrderNumber">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="LicensePlate">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="CustomerName">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="ProductName">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="DateIn">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="TimeIn">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="DateOut">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="TimeOut">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="WeightIn">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="WeightOut">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="NetWeight">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="Note">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="PrintNo">
       <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="WeightType">
-      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
@@ -1422,11 +1478,6 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>PrintNo</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>WeightType</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
@@ -1586,6 +1637,6 @@ zj/f06eVdv75nj6ttPPP9/RppZ1/vqdPK+388z19Wmnnn+/p00o7/3xPn1ba+ed7+rTSzj/f06eVdv75
 vvXUZwAAAABJRU5ErkJggg==</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>c3b58f16-b085-4530-bfbe-a011e1a16351</rd:ReportID>
 </Report>

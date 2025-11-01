@@ -35,7 +35,6 @@ namespace Project_philico_food.Db
 
                 using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    //cmd.Parameters.AddWithValue("@pfx", $"OR{yy}{MM}{dd}");
                     cmd.Parameters.Add(new SQLiteParameter("@pfx", $"OR{yy}{MM}{dd}"));
                     var last = cmd.ExecuteScalar() as string;
 
@@ -73,14 +72,6 @@ namespace Project_philico_food.Db
                     cmd.Parameters.Add(new SQLiteParameter("@Status", model.Status));
                     cmd.Parameters.Add(new SQLiteParameter("@LicensePlate", model.LicensePlate));
 
-
-                    //cmd.Parameters.AddWithValue("@OrderNumber", model.OrderNumber);
-                    //cmd.Parameters.AddWithValue("@ProductName", model.ProductName);
-                    //cmd.Parameters.AddWithValue("@CustomerName", model.CustomerName);
-                    //cmd.Parameters.AddWithValue("@Note", model.Note ?? "");
-                    //cmd.Parameters.AddWithValue("@NetWeight", model.NetWeight);
-                    //cmd.Parameters.AddWithValue("@Status", model.Status);
-                    //cmd.Parameters.AddWithValue("@LicensePlate", model.LicensePlate);
                     cmd.ExecuteNonQuery();
                     return true;
                 }
@@ -128,7 +119,6 @@ namespace Project_philico_food.Db
                 const string sql = "SELECT * FROM Orders WHERE Status=@s ORDER BY Id DESC";
                 using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    //cmd.Parameters.AddWithValue("@s", status);
                     cmd.Parameters.Add(new SQLiteParameter("@s", status));
 
                     using (var da = new SQLiteDataAdapter(cmd))
@@ -160,39 +150,6 @@ namespace Project_philico_food.Db
 
         public OrderModel getOrderByOrderNumberOrId(string orderNumber)
         {
-            //OrderModel model = new OrderModel();
-            //try
-            //{
-            //    string sql = $"SELECT * FROM Ordesrs WHERE OrderNumber = '{orderNumber}'";
-            //    using (SQLiteDataAdapter da = new SQLiteDataAdapter(sql, _con))
-            //    {
-            //        DataTable tb = new DataTable();
-            //        da.Fill(tb);
-            //        if (tb.Rows.Count == 0 || tb == null)
-            //            return null;
-            //        foreach (DataRow dr in tb.Rows)
-            //        {
-            //            model = new OrderModel
-            //            {
-            //                Id = int.Parse(dr["Id"].ToString()),
-            //                CustomerName = dr["CustomerName"].ToString(),
-            //                ProductName = dr["ProductName"].ToString(),
-            //                Note = dr["Note"].ToString(),
-            //                NetWeight = int.Parse(dr["NetWeight"].ToString()),
-            //                OrderNumber = dr["OrderNumber"].ToString(),
-            //                Status = dr["Status"].ToString(),
-            //                LicensePlate = dr["LicensePlate"].ToString()
-            //            };
-            //            break;
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Err = ex.Message;
-            //    return null;
-            //}
-            //return model;
             try
             {
                 const string sql = "SELECT * FROM Orders WHERE OrderNumber = @no";
@@ -281,6 +238,7 @@ namespace Project_philico_food.Db
             catch (Exception ex) { Err = ex.Message; return false; }
         }
 
+       
         public OrderModel GetActiveByPlate(string plate)
         {
             try
@@ -293,7 +251,6 @@ namespace Project_philico_food.Db
 
                 using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    //cmd.Parameters.AddWithValue("@p", plate);
                     cmd.Parameters.Add(new SQLiteParameter("@p", plate));
                     using (var rd = cmd.ExecuteReader())
                     {
@@ -323,7 +280,6 @@ namespace Project_philico_food.Db
                 const string sql = "DELETE FROM Orders WHERE OrderNumber=@no";
                 using (var cmd = new SQLiteCommand(sql, _con))
                 {
-                    //cmd.Parameters.AddWithValue("@no", orderNumber);
                     cmd.Parameters.Add(new SQLiteParameter("@no", orderNumber));
                     cmd.ExecuteNonQuery();
                 }
@@ -331,6 +287,59 @@ namespace Project_philico_food.Db
             }
             catch (Exception ex) { Err = ex.Message; return false; }
         }
+        public int getCurrentPrintNo(string orderNumber)
+        {
+            using (var cmd = new SQLiteCommand(_con))
+            {
+                cmd.CommandText = @"SELECT COALESCE(PrintNo, 0) FROM Orders WHERE OrderNumber = @ord;";
+                cmd.Parameters.AddWithValue("@ord", orderNumber);
+                var result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : 0;
+            }
+        }
+        public int getPrintNo(string orderNumber)
+        {
+            using (var tx = _con.BeginTransaction())
+            using (var cmd = new SQLiteCommand(_con))
+            {
+                cmd.Transaction = tx;
 
-    }
+                cmd.CommandText = @"
+                                    UPDATE Orders
+                                    SET PrintNo = COALESCE(PrintNo, 0) + 1
+                                    WHERE OrderNumber = @ord;";
+                cmd.Parameters.AddWithValue("@ord", orderNumber);
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    tx.Rollback();
+                    throw new Exception("Order not found: " + orderNumber);
+                }
+
+                cmd.Parameters.Clear();
+                cmd.CommandText = @"SELECT COALESCE(PrintNo,0) FROM Orders WHERE OrderNumber = @ord;";
+                cmd.Parameters.AddWithValue("@ord", orderNumber);
+                int newNo = Convert.ToInt32(cmd.ExecuteScalar());
+
+                cmd.Parameters.Clear();
+                cmd.CommandText = @"
+                                    CREATE TABLE IF NOT EXISTS PrintLog(
+                                      Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                      OrderNumber TEXT NOT NULL,
+                                      PrintNo INTEGER NOT NULL,
+                                      PrintedAt TEXT NOT NULL
+                                    );";
+                cmd.ExecuteNonQuery();
+
+                cmd.Parameters.Clear();
+                cmd.CommandText = @"INSERT INTO PrintLog(OrderNumber, PrintNo, PrintedAt)
+                                    VALUES (@ord, @no, strftime('%Y-%m-%d %H:%M:%S','now'));";
+                cmd.Parameters.AddWithValue("@ord", orderNumber);
+                cmd.Parameters.AddWithValue("@no", newNo);
+                cmd.ExecuteNonQuery();
+
+                tx.Commit();
+                return newNo;
+            }
+        }
+        }
 }

@@ -28,11 +28,8 @@ namespace Project_philico_food.Db
                 string sql = "SELECT * FROM  Users ORDER BY Id DESC";
                 using (SQLiteDataAdapter da = new SQLiteDataAdapter(sql, _con))
                 {
-                    //var dt = new DataTable();
-                    //da.Fill(dt);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    //var list = new List<UsersModel>();
                     if (dt.Rows.Count == 0)
                     {
                         return null;
@@ -98,13 +95,6 @@ namespace Project_philico_food.Db
             catch (Exception ex) { Err = ex.Message; return null; }
             return lists;
         }
-
-    
-        /// <summary>
-        /// เพิ่มข้อมูล (ค่าที่ส่งเข้ามาเป็น "เข้ารหัสแล้ว")
-        /// </summary>
-        /// <param name="m">model user </param>
-        /// <returns>True = สำเร็จ , False = ไม่สำเร็จ</returns>
         public bool Add(UsersModel m)
         {
             try
