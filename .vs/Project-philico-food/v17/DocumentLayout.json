@@ -3,48 +3,32 @@
   "WorkspaceRootPath": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\pages\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|e:\\thaiscale\\philco food\\project-philico-food\\project-philico-food\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\db\\reportdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\db\\reportdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|e:\\thaiscale\\philco food\\project-philico-food\\project-philico-food\\report\\ticketreport.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\report\\ticketreport.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\report\\ticketreport.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\pages\\frmprintrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmprintrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|e:\\thaiscale\\philco food\\project-philico-food\\project-philico-food\\pages\\frmweighing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmweighing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\pages\\frmprintrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmprintrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|e:\\thaiscale\\philco food\\project-philico-food\\project-philico-food\\pages\\frmweighing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmweighing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\pages\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|e:\\thaiscale\\philco food\\project-philico-food\\project-philico-food\\pages\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|e:\\thaiscale\\philco food\\project-philico-food\\project-philico-food\\pages\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\pages\\frmtdrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmtdrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\db\\orderdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\db\\orderdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\models\\orderdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\models\\orderdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\db\\orderdetaildb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\db\\orderdetaildb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|E:\\ThaiScale\\Philco Food\\Project-philico-food\\project-philico-food\\pages\\frmtdrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DA8E160-ED1B-48BB-AFF7-E3B6EFFA1F06}|Project-philico-food\\Project-philico-food.csproj|solutionrelative:project-philico-food\\pages\\frmtdrp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +50,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\App.config",
+              "RelativeDocumentMoniker": "Project-philico-food\\App.config",
+              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\App.config",
+              "RelativeToolTip": "Project-philico-food\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-03T01:29:49.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TicketReport.rdlc [Design]",
               "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Report\\TicketReport.rdlc",
               "RelativeDocumentMoniker": "Project-philico-food\\Report\\TicketReport.rdlc",
@@ -78,15 +75,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OrderDetailModel.cs",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Models\\OrderDetailModel.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Models\\OrderDetailModel.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Models\\OrderDetailModel.cs",
-              "RelativeToolTip": "Project-philico-food\\Models\\OrderDetailModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "frmWeighing.cs",
+              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmWeighing.cs",
+              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmWeighing.cs",
+              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmWeighing.cs",
+              "RelativeToolTip": "Project-philico-food\\Pages\\frmWeighing.cs",
+              "ViewState": "AgIAAHsCAAAAAAAAAAAkwJ0CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T01:24:40.911Z"
+              "WhenOpened": "2025-11-03T01:28:17.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmWeighing.cs [Design]",
+              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmWeighing.cs",
+              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmWeighing.cs",
+              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmWeighing.cs [Design]",
+              "RelativeToolTip": "Project-philico-food\\Pages\\frmWeighing.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:28:17.078Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmUsers.cs",
+              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmUsers.cs",
+              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmUsers.cs",
+              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmUsers.cs",
+              "RelativeToolTip": "Project-philico-food\\Pages\\frmUsers.cs",
+              "ViewState": "AgIAABABAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:28:09.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmUsers.cs [Design]",
+              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmUsers.cs",
+              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmUsers.cs",
+              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmUsers.cs [Design]",
+              "RelativeToolTip": "Project-philico-food\\Pages\\frmUsers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:28:08.522Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -96,104 +131,9 @@
               "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmTdrp.cs",
               "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmTdrp.cs",
               "RelativeToolTip": "Project-philico-food\\Pages\\frmTdrp.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAwJEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAswI4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T10:02:35.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OrderDb.cs",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Db\\OrderDb.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Db\\OrderDb.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Db\\OrderDb.cs",
-              "RelativeToolTip": "Project-philico-food\\Db\\OrderDb.cs",
-              "ViewState": "AgIAACEBAAAAAAAAAAAqwFcBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T10:00:32.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "OrderDetailDb.cs",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Db\\OrderDetailDb.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Db\\OrderDetailDb.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Db\\OrderDetailDb.cs",
-              "RelativeToolTip": "Project-philico-food\\Db\\OrderDetailDb.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwF0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T09:58:43.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmPrintRp.cs",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmPrintRp.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmPrintRp.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmPrintRp.cs",
-              "RelativeToolTip": "Project-philico-food\\Pages\\frmPrintRp.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowEgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T09:58:19.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmPrintRp.cs [Design]",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmPrintRp.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmPrintRp.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmPrintRp.cs [Design]",
-              "RelativeToolTip": "Project-philico-food\\Pages\\frmPrintRp.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T09:58:17.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmTdrp.cs [Design]",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmTdrp.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmTdrp.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmTdrp.cs [Design]",
-              "RelativeToolTip": "Project-philico-food\\Pages\\frmTdrp.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T04:16:38.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReportDb.cs",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Db\\ReportDb.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Db\\ReportDb.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Db\\ReportDb.cs",
-              "RelativeToolTip": "Project-philico-food\\Db\\ReportDb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T03:12:14.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmReport.cs [Design]",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmReport.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmReport.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmReport.cs [Design]",
-              "RelativeToolTip": "Project-philico-food\\Pages\\frmReport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T01:47:25.446Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmReport.cs",
-              "DocumentMoniker": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmReport.cs",
-              "RelativeDocumentMoniker": "Project-philico-food\\Pages\\frmReport.cs",
-              "ToolTip": "E:\\ThaiScale\\Philco Food\\Project-philico-food\\Project-philico-food\\Pages\\frmReport.cs",
-              "RelativeToolTip": "Project-philico-food\\Pages\\frmReport.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAUwFYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T01:20:56.107Z",
+              "WhenOpened": "2025-10-31T10:02:35.564Z",
               "EditorCaption": ""
             }
           ]

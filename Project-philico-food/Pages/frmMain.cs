@@ -20,8 +20,6 @@ namespace Project_philico_food.Pages
             InitializeComponent();
 
         }
-
-
     private void frmMain_Load(object sender, EventArgs e)
     {
         var u = AuthService.CurrentUser;

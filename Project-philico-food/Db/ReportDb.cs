@@ -116,18 +116,6 @@ namespace Project_philico_food.Db
                 where.Add("o.ProductName = @pro");
                 ps.Add(new SQLiteParameter("@pro", f.ProductName));
             }
-
-            //if (!string.IsNullOrWhiteSpace(f?.DatePrefix))
-            //{
-            //    where.Add(@"
-            //            EXISTS (
-            //                SELECT 1 FROM OrderDetail d
-            //                WHERE d.OrderNumber = o.OrderNumber
-            //                  AND d.Datez = @date
-            //            )");
-            //    ps.Add(new SQLiteParameter("@date", f.DatePrefix));
-            //}
-
             if (f?.DateList != null && f.DateList.Count > 0)
             {
                 var names = new List<string>();

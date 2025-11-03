@@ -55,7 +55,6 @@ namespace Project_philico_food.Functions
 
         public string DataReceive(string rawLine)
         {
-            //string weight = "";
             try
             {
                 if (string.IsNullOrWhiteSpace(rawLine))
