@@ -24,7 +24,7 @@ namespace Project_philico_food.Pages
         }
 
         private int Id { get; set; } = 0;
-        private string ProductNames { get; set; }
+        private string ProductName { get; set; }
         private string ProductCode { get; set; }
 
 
@@ -133,6 +133,23 @@ namespace Project_philico_food.Pages
         {
             getProductList();
         }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ProductName = null;
+            ProductCode = null;
+            clearText();
+            showGbInfor(false);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Id = 0;
+            ProductName = null;
+            ProductCode = null;
+            clearText(); 
+            gbInfor.Text = "Add Product";
+            showGbInfor(true);
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -187,7 +204,7 @@ namespace Project_philico_food.Pages
                     msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
                     msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                     msg.Show("Update product success", "Successfully");
-                    ProductNames = null;
+                    ProductName = null;
                     ProductCode = null;
                     Id = 0;
                     clearText();
@@ -202,16 +219,6 @@ namespace Project_philico_food.Pages
                 }
 
             }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            showGbInfor(false);
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            showGbInfor(true);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -249,13 +256,14 @@ namespace Project_philico_food.Pages
                 string clName = dgvList.Columns[e.ColumnIndex].Name;
                 Id = int.Parse(dgvList.Rows[e.RowIndex].Cells["cl_id"].Value.ToString());
                 ProductCode = dgvList.Rows[e.RowIndex].Cells["cl_productCode"].Value.ToString();
-                ProductNames = dgvList.Rows[e.RowIndex].Cells["cl_productName"].Value.ToString();
+                ProductName = dgvList.Rows[e.RowIndex].Cells["cl_productName"].Value.ToString();
                 switch (clName)
                 {
                     case "cl_edit":
                         showGbInfor(true);
+                        gbInfor.Text = "Edit Product";
                         txtAddProductCode.Text = ProductCode;
-                        txtAddProductName.Text = ProductNames;
+                        txtAddProductName.Text = ProductName;
                         break;
                     case "cl_delete":
                         msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
@@ -270,7 +278,7 @@ namespace Project_philico_food.Pages
                                 msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                                 msg.Show("Delete product success", "Delete success");
                                 Id = 0;
-                                ProductNames = null;
+                                ProductName = null;
                                 ProductCode = null;
                                 getProductList();
                             }

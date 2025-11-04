@@ -178,7 +178,7 @@ namespace Project_philico_food.Db
                             EXISTS (
                                 SELECT 1
                                 FROM OrderDetail d
-                                WHERE d.OrderNumber = o.OrderNumber
+                                WHERE d.OrderNumber = o.OrderNumbe
                                   AND d.Datez LIKE @today || '%'
                             )";
         string todayPrefix = DateTime.Now.ToString("yyyy-MM-dd", CultureInfo.CreateSpecificCulture("en-US"));

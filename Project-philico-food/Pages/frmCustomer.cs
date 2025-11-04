@@ -59,7 +59,6 @@ namespace Project_philico_food.Pages
             txtAddCustomerName.Clear();
         }
 
-
         void addModelToGrid(List<CustomerModel> lists)
         {
             AESEncryption aESEncryption = new AESEncryption();
@@ -150,11 +149,22 @@ namespace Project_philico_food.Pages
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            Id = 0;
+            CustomerName = null;
+            CustomerCode = null;
+
+            txtAddCustomerCode.Clear();
+            txtAddCustomerName.Clear();
+            gbInfor.Text = "Add Customer";
             showGbInfor(true);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            CustomerName = null;
+            CustomerCode = null;
+
+            clearText();
             showGbInfor(false);
         }
 
@@ -227,8 +237,6 @@ namespace Project_philico_food.Pages
 
             }
 
-
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -270,6 +278,7 @@ namespace Project_philico_food.Pages
                 {
                     case "cl_edit":
                         showGbInfor(true);
+                        gbInfor.Text = "Edit Customer";
                         txtAddCustomerCode.Text = CustomerCode;
                         txtAddCustomerName.Text = CustomerName;
                         break;

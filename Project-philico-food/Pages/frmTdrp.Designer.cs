@@ -380,6 +380,7 @@
             this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTdrp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTdrp";
             this.Load += new System.EventHandler(this.frmTdrp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

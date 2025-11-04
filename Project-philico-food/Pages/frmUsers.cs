@@ -139,6 +139,7 @@ namespace Project_philico_food.Pages
         {
             Id = 0;
             clearText();
+            gbInfo.Text = "Add new product";
             showGbInfo(true);
         }
 
@@ -162,6 +163,16 @@ namespace Project_philico_food.Pages
 
             UsersDb usersDb = new UsersDb();
             AESEncryption aESEncryption = new AESEncryption();
+            
+            var model = new UsersModel
+                {
+                    Id = Id,
+                    Name = aESEncryption.Encrypt(txtAddName.Text.Trim()),
+                    Username = aESEncryption.Encrypt(txtAddUsername.Text.Trim()),
+                    Email = aESEncryption.Encrypt(txtAddEmail.Text.Trim()),
+                    Phone = aESEncryption.Encrypt(txtAddPhone.Text.Trim()),
+                    Password = aESEncryption.Encrypt(txtAddPassword.Text)
+                };
 
             if (Id == 0 || !string.IsNullOrWhiteSpace(txtAddPassword.Text))
             {
@@ -182,47 +193,47 @@ namespace Project_philico_food.Pages
                     return;
 
                 }
-            }
-
-                var model = new UsersModel
+                if(usersDb.Add(model))
                 {
-                    Id = Id,
-                    Name = aESEncryption.Encrypt(txtAddName.Text.Trim()),
-                    Username = aESEncryption.Encrypt(txtAddUsername.Text.Trim()),
-                    Email = aESEncryption.Encrypt(txtAddEmail.Text.Trim()),
-                    Phone = aESEncryption.Encrypt(txtAddPhone.Text.Trim()),
-                    Password = aESEncryption.Encrypt(txtAddPassword.Text)
-                };
-
-            bool ok;
-            if (Id == 0)
-            {
-                ok = usersDb.Add(model);
-            }
-            else
-            {
-                ok = string.IsNullOrWhiteSpace(txtAddPassword.Text)
-                    ? usersDb.Update(model)
-                    : usersDb.UpdateWithPassword(model, model.Password);
+                    msg.Parent = this;
+                    msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                    msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    msg.Show("Add new user success", "Successfully");
+                    clearText();
+                    getUsersList();
+                    return;
+                }
+                else
+                {
+                    msg.Parent = this;
+                    msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                    msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    msg.Show($"Error Add new user \n\nError {usersDb.Err}", "Error add new");
+                }
             }
 
-            if (ok)
-            {
-                msg.Parent = this;
-                msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                msg.Show("Update user success", "Successfully");
-                clearText();
-                getUsersList();
-                return;
-            }
             else
             {
-                msg.Parent = this;
-                msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                msg.Show($"Error update user \n\nError {usersDb.Err}", "Error update");
+                if (usersDb.Update(model) || usersDb.UpdateWithPassword(model, model.Password))
+                {
+                    msg.Parent = this;
+                    msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                    msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    msg.Show("Update user success", "Successfully");
+                    clearText();
+                    getUsersList();
+                    return;
+                }
+                else
+                {
+                    msg.Parent = this;
+                    msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                    msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    msg.Show($"Error update user \n\nError {usersDb.Err}", "Error update");
+                }
             }
+ 
+           
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -246,6 +257,7 @@ namespace Project_philico_food.Pages
                 {
                     case "cl_edit":
                         showGbInfo(true);
+                        gbInfo.Text = "Edit User";
                         txtAddName.Text = NameText;
                         txtAddUsername.Text = UsernameText;
                         txtAddEmail.Text = EmailText;

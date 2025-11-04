@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomer));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -39,6 +39,11 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cl_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_customerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cl_delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtSearchCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
             this.gbList = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -52,14 +57,8 @@
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnControl = new System.Windows.Forms.Panel();
             this.msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.cl_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_customerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cl_delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gbList.SuspendLayout();
@@ -123,19 +122,19 @@
             // 
             this.dgvList.AllowUserToAddRows = false;
             this.dgvList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgvList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvList.ColumnHeadersHeight = 30;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cl_id,
@@ -143,14 +142,14 @@
             this.cl_customerName,
             this.cl_edit,
             this.cl_delete});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvList.Location = new System.Drawing.Point(5, 45);
@@ -182,6 +181,48 @@
             this.dgvList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
+            // 
+            // cl_id
+            // 
+            this.cl_id.HeaderText = "Id";
+            this.cl_id.Name = "cl_id";
+            this.cl_id.ReadOnly = true;
+            this.cl_id.Visible = false;
+            this.cl_id.Width = 350;
+            // 
+            // cl_customerCode
+            // 
+            this.cl_customerCode.HeaderText = "Customer Code";
+            this.cl_customerCode.Name = "cl_customerCode";
+            this.cl_customerCode.ReadOnly = true;
+            this.cl_customerCode.Width = 200;
+            // 
+            // cl_customerName
+            // 
+            this.cl_customerName.HeaderText = "Customer Name";
+            this.cl_customerName.Name = "cl_customerName";
+            this.cl_customerName.ReadOnly = true;
+            this.cl_customerName.Width = 600;
+            // 
+            // cl_edit
+            // 
+            this.cl_edit.HeaderText = "";
+            this.cl_edit.Name = "cl_edit";
+            this.cl_edit.ReadOnly = true;
+            this.cl_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cl_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cl_edit.Text = "Edit";
+            this.cl_edit.UseColumnTextForButtonValue = true;
+            this.cl_edit.Width = 120;
+            // 
+            // cl_delete
+            // 
+            this.cl_delete.HeaderText = "";
+            this.cl_delete.Name = "cl_delete";
+            this.cl_delete.ReadOnly = true;
+            this.cl_delete.Text = "Delete";
+            this.cl_delete.UseColumnTextForButtonValue = true;
+            this.cl_delete.Width = 120;
             // 
             // txtSearchCode
             // 
@@ -434,15 +475,6 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Search options";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 25);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Add , Delete ,Edit and search";
-            // 
             // pnControl
             // 
             this.pnControl.Controls.Add(this.label2);
@@ -464,48 +496,6 @@
             this.msg.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.msg.Text = null;
             // 
-            // cl_id
-            // 
-            this.cl_id.HeaderText = "Id";
-            this.cl_id.Name = "cl_id";
-            this.cl_id.ReadOnly = true;
-            this.cl_id.Visible = false;
-            this.cl_id.Width = 350;
-            // 
-            // cl_customerCode
-            // 
-            this.cl_customerCode.HeaderText = "Customer Code";
-            this.cl_customerCode.Name = "cl_customerCode";
-            this.cl_customerCode.ReadOnly = true;
-            this.cl_customerCode.Width = 200;
-            // 
-            // cl_customerName
-            // 
-            this.cl_customerName.HeaderText = "Customer Name";
-            this.cl_customerName.Name = "cl_customerName";
-            this.cl_customerName.ReadOnly = true;
-            this.cl_customerName.Width = 600;
-            // 
-            // cl_edit
-            // 
-            this.cl_edit.HeaderText = "";
-            this.cl_edit.Name = "cl_edit";
-            this.cl_edit.ReadOnly = true;
-            this.cl_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cl_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cl_edit.Text = "Edit";
-            this.cl_edit.UseColumnTextForButtonValue = true;
-            this.cl_edit.Width = 120;
-            // 
-            // cl_delete
-            // 
-            this.cl_delete.HeaderText = "";
-            this.cl_delete.Name = "cl_delete";
-            this.cl_delete.ReadOnly = true;
-            this.cl_delete.Text = "Delete";
-            this.cl_delete.UseColumnTextForButtonValue = true;
-            this.cl_delete.Width = 120;
-            // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
@@ -514,7 +504,6 @@
             this.ClientSize = new System.Drawing.Size(1067, 865);
             this.Controls.Add(this.gbInfor);
             this.Controls.Add(this.pnControl);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.gbList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2ControlBox2);
@@ -560,7 +549,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAddCustomerName;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnControl;
         private Guna.UI2.WinForms.Guna2MessageDialog msg;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_id;

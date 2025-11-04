@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsers));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
@@ -47,6 +47,13 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.gbList = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cl_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cl_delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbInfo = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
@@ -64,13 +71,6 @@
             this.txtAddName = new Guna.UI2.WinForms.Guna2TextBox();
             this.msg = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.cl_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cl_delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnControl.SuspendLayout();
             this.gbList.SuspendLayout();
@@ -212,7 +212,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSearch.Location = new System.Drawing.Point(681, 33);
+            this.btnSearch.Location = new System.Drawing.Point(668, 33);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(178, 45);
             this.btnSearch.TabIndex = 10;
@@ -260,18 +260,18 @@
             // 
             this.dgvList.AllowUserToAddRows = false;
             this.dgvList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgvList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.ColumnHeadersHeight = 30;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cl_id,
@@ -281,14 +281,14 @@
             this.cl_phone,
             this.cl_edit,
             this.cl_delete});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvList.Location = new System.Drawing.Point(5, 45);
@@ -321,6 +321,61 @@
             this.dgvList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick_1);
             // 
+            // cl_id
+            // 
+            this.cl_id.FillWeight = 30.81382F;
+            this.cl_id.HeaderText = "Id";
+            this.cl_id.Name = "cl_id";
+            this.cl_id.ReadOnly = true;
+            // 
+            // cl_name
+            // 
+            this.cl_name.FillWeight = 30.81382F;
+            this.cl_name.HeaderText = "Name";
+            this.cl_name.Name = "cl_name";
+            this.cl_name.ReadOnly = true;
+            // 
+            // cl_username
+            // 
+            this.cl_username.FillWeight = 30.81382F;
+            this.cl_username.HeaderText = "Username";
+            this.cl_username.Name = "cl_username";
+            this.cl_username.ReadOnly = true;
+            // 
+            // cl_email
+            // 
+            this.cl_email.FillWeight = 30.81382F;
+            this.cl_email.HeaderText = "Email";
+            this.cl_email.Name = "cl_email";
+            this.cl_email.ReadOnly = true;
+            // 
+            // cl_phone
+            // 
+            this.cl_phone.FillWeight = 30.81382F;
+            this.cl_phone.HeaderText = "Phone";
+            this.cl_phone.Name = "cl_phone";
+            this.cl_phone.ReadOnly = true;
+            // 
+            // cl_edit
+            // 
+            this.cl_edit.FillWeight = 20F;
+            this.cl_edit.HeaderText = "";
+            this.cl_edit.Name = "cl_edit";
+            this.cl_edit.ReadOnly = true;
+            this.cl_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cl_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cl_edit.Text = "Edit";
+            this.cl_edit.UseColumnTextForButtonValue = true;
+            // 
+            // cl_delete
+            // 
+            this.cl_delete.FillWeight = 20F;
+            this.cl_delete.HeaderText = "";
+            this.cl_delete.Name = "cl_delete";
+            this.cl_delete.ReadOnly = true;
+            this.cl_delete.Text = "Delete";
+            this.cl_delete.UseColumnTextForButtonValue = true;
+            // 
             // gbInfo
             // 
             this.gbInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
@@ -341,7 +396,7 @@
             this.gbInfo.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.gbInfo.Font = new System.Drawing.Font("Athiti", 12F);
             this.gbInfo.ForeColor = System.Drawing.Color.White;
-            this.gbInfo.Location = new System.Drawing.Point(249, 101);
+            this.gbInfo.Location = new System.Drawing.Point(216, 75);
             this.gbInfo.Name = "gbInfo";
             this.gbInfo.Padding = new System.Windows.Forms.Padding(5);
             this.gbInfo.Size = new System.Drawing.Size(663, 415);
@@ -611,61 +666,6 @@
             this.msg.Parent = null;
             this.msg.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.msg.Text = null;
-            // 
-            // cl_id
-            // 
-            this.cl_id.FillWeight = 30.81382F;
-            this.cl_id.HeaderText = "Id";
-            this.cl_id.Name = "cl_id";
-            this.cl_id.ReadOnly = true;
-            // 
-            // cl_name
-            // 
-            this.cl_name.FillWeight = 30.81382F;
-            this.cl_name.HeaderText = "Name";
-            this.cl_name.Name = "cl_name";
-            this.cl_name.ReadOnly = true;
-            // 
-            // cl_username
-            // 
-            this.cl_username.FillWeight = 30.81382F;
-            this.cl_username.HeaderText = "Username";
-            this.cl_username.Name = "cl_username";
-            this.cl_username.ReadOnly = true;
-            // 
-            // cl_email
-            // 
-            this.cl_email.FillWeight = 30.81382F;
-            this.cl_email.HeaderText = "Email";
-            this.cl_email.Name = "cl_email";
-            this.cl_email.ReadOnly = true;
-            // 
-            // cl_phone
-            // 
-            this.cl_phone.FillWeight = 30.81382F;
-            this.cl_phone.HeaderText = "Phone";
-            this.cl_phone.Name = "cl_phone";
-            this.cl_phone.ReadOnly = true;
-            // 
-            // cl_edit
-            // 
-            this.cl_edit.FillWeight = 20F;
-            this.cl_edit.HeaderText = "";
-            this.cl_edit.Name = "cl_edit";
-            this.cl_edit.ReadOnly = true;
-            this.cl_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cl_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cl_edit.Text = "Edit";
-            this.cl_edit.UseColumnTextForButtonValue = true;
-            // 
-            // cl_delete
-            // 
-            this.cl_delete.FillWeight = 20F;
-            this.cl_delete.HeaderText = "";
-            this.cl_delete.Name = "cl_delete";
-            this.cl_delete.ReadOnly = true;
-            this.cl_delete.Text = "Delete";
-            this.cl_delete.UseColumnTextForButtonValue = true;
             // 
             // frmUsers
             // 

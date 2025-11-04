@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReport));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.msg = new Guna.UI2.WinForms.Guna2MessageDialog();
@@ -48,16 +48,18 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cbbProduct = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.chbProduct = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.chbDate = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cbbCus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.chbCus = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cbbCarId = new Guna.UI2.WinForms.Guna2ComboBox();
             this.chbCarId = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.txbDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSerach = new Guna.UI2.WinForms.Guna2Button();
+            this.txbDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbCarId = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cl_orNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,8 +76,6 @@
             this.btnSc = new Guna.UI2.WinForms.Guna2Button();
             this.btnPc = new Guna.UI2.WinForms.Guna2Button();
             this.btnCc = new Guna.UI2.WinForms.Guna2Button();
-            this.dtpFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnControl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -269,6 +269,38 @@
             this.panel1.Size = new System.Drawing.Size(1059, 154);
             this.panel1.TabIndex = 32;
             // 
+            // dtpTo
+            // 
+            this.dtpTo.Checked = true;
+            this.dtpTo.CustomFormat = " ";
+            this.dtpTo.FillColor = System.Drawing.Color.White;
+            this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTo.Location = new System.Drawing.Point(854, 102);
+            this.dtpTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(142, 36);
+            this.dtpTo.TabIndex = 51;
+            this.dtpTo.Value = new System.DateTime(2025, 10, 31, 11, 17, 23, 812);
+            this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Checked = true;
+            this.dtpFrom.CustomFormat = " ";
+            this.dtpFrom.FillColor = System.Drawing.Color.White;
+            this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFrom.Location = new System.Drawing.Point(671, 102);
+            this.dtpFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(142, 36);
+            this.dtpFrom.TabIndex = 41;
+            this.dtpFrom.Value = new System.DateTime(2025, 10, 31, 11, 19, 32, 123);
+            this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
+            // 
             // cbbProduct
             // 
             this.cbbProduct.BackColor = System.Drawing.Color.Transparent;
@@ -285,16 +317,6 @@
             this.cbbProduct.Size = new System.Drawing.Size(153, 36);
             this.cbbProduct.TabIndex = 50;
             this.cbbProduct.DropDown += new System.EventHandler(this.cbbProduct_DropDown);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Athiti", 12F);
-            this.label3.Location = new System.Drawing.Point(819, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 25);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "To";
             // 
             // chbProduct
             // 
@@ -316,6 +338,16 @@
             this.chbProduct.UncheckedState.BorderThickness = 0;
             this.chbProduct.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chbProduct.CheckedChanged += new System.EventHandler(this.chbProduct_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Athiti", 12F);
+            this.label3.Location = new System.Drawing.Point(819, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 25);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "To";
             // 
             // chbDate
             // 
@@ -415,6 +447,28 @@
             this.chbCarId.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chbCarId.CheckedChanged += new System.EventHandler(this.chbProduct_CheckedChanged);
             // 
+            // btnSerach
+            // 
+            this.btnSerach.Animated = true;
+            this.btnSerach.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
+            this.btnSerach.BorderRadius = 4;
+            this.btnSerach.BorderThickness = 1;
+            this.btnSerach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSerach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSerach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSerach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSerach.FillColor = System.Drawing.Color.White;
+            this.btnSerach.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSerach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
+            this.btnSerach.Image = ((System.Drawing.Image)(resources.GetObject("btnSerach.Image")));
+            this.btnSerach.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnSerach.Location = new System.Drawing.Point(925, 20);
+            this.btnSerach.Name = "btnSerach";
+            this.btnSerach.Size = new System.Drawing.Size(118, 45);
+            this.btnSerach.TabIndex = 10;
+            this.btnSerach.Text = "Search";
+            this.btnSerach.Click += new System.EventHandler(this.btnSerach_Click);
+            // 
             // txbDate
             // 
             this.txbDate.Animated = true;
@@ -438,28 +492,6 @@
             this.txbDate.SelectedText = "";
             this.txbDate.Size = new System.Drawing.Size(110, 40);
             this.txbDate.TabIndex = 14;
-            // 
-            // btnSerach
-            // 
-            this.btnSerach.Animated = true;
-            this.btnSerach.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
-            this.btnSerach.BorderRadius = 4;
-            this.btnSerach.BorderThickness = 1;
-            this.btnSerach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSerach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSerach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSerach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSerach.FillColor = System.Drawing.Color.White;
-            this.btnSerach.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSerach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
-            this.btnSerach.Image = ((System.Drawing.Image)(resources.GetObject("btnSerach.Image")));
-            this.btnSerach.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSerach.Location = new System.Drawing.Point(925, 20);
-            this.btnSerach.Name = "btnSerach";
-            this.btnSerach.Size = new System.Drawing.Size(118, 45);
-            this.btnSerach.TabIndex = 10;
-            this.btnSerach.Text = "Search";
-            this.btnSerach.Click += new System.EventHandler(this.btnSerach_Click);
             // 
             // txbCarId
             // 
@@ -489,19 +521,19 @@
             // 
             this.dgvList.AllowUserToAddRows = false;
             this.dgvList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgvList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Athiti", 14.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Athiti", 14.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.ColumnHeadersHeight = 40;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -514,29 +546,29 @@
             this.cl_wgO,
             this.cl_status,
             this.cl_print});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Athiti", 12F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Athiti", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvList.Location = new System.Drawing.Point(58, 273);
             this.dgvList.Name = "dgvList";
             this.dgvList.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Athiti", 8.25F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Athiti", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvList.RowHeadersVisible = false;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvList.RowTemplate.Height = 30;
             this.dgvList.Size = new System.Drawing.Size(1059, 474);
             this.dgvList.TabIndex = 33;
@@ -730,44 +762,12 @@
             this.btnCc.TabIndex = 40;
             this.btnCc.Text = "Cancle";
             // 
-            // dtpFrom
-            // 
-            this.dtpFrom.Checked = true;
-            this.dtpFrom.CustomFormat = " ";
-            this.dtpFrom.FillColor = System.Drawing.Color.White;
-            this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFrom.Location = new System.Drawing.Point(671, 102);
-            this.dtpFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(142, 36);
-            this.dtpFrom.TabIndex = 41;
-            this.dtpFrom.Value = new System.DateTime(2025, 10, 31, 11, 19, 32, 123);
-            this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
-            // 
-            // dtpTo
-            // 
-            this.dtpTo.Checked = true;
-            this.dtpTo.CustomFormat = " ";
-            this.dtpTo.FillColor = System.Drawing.Color.White;
-            this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(854, 102);
-            this.dtpTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(142, 36);
-            this.dtpTo.TabIndex = 51;
-            this.dtpTo.Value = new System.DateTime(2025, 10, 31, 11, 17, 23, 812);
-            this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
-            // 
             // frmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1153, 759);
+            this.ClientSize = new System.Drawing.Size(1153, 797);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCc);
