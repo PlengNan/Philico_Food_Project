@@ -13,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+
 
 
 
@@ -26,6 +28,7 @@ namespace Project_philico_food.Pages
         AESEncryption aESEncryption = new AESEncryption();
 
         private volatile bool _isClosing = false;
+        private int _capacityLimit = 0;
 
         public frmWeighing()
         {
@@ -55,6 +58,28 @@ namespace Project_philico_food.Pages
             cbbCusName.SelectedIndex = 0;
             cbbPrdCode.SelectedIndex = 0;
             cbbPrdName.SelectedIndex = 0;
+        }
+        private void LoadCapacityFromConfig()
+        {
+            try
+            {
+                var encCap = ConfigurationManager.AppSettings["CAPACITY"];
+                if (string.IsNullOrWhiteSpace(encCap))
+                {
+                    _capacityLimit = 0; 
+                    return;
+                }
+
+                var plainCap = aESEncryption.Decrypt(encCap);
+                if (!int.TryParse(plainCap, out _capacityLimit))
+                {
+                    _capacityLimit = 0;
+                }
+            }
+            catch
+            {
+                _capacityLimit = 0;
+            }
         }
 
         string decryptData(string value)
@@ -201,9 +226,22 @@ namespace Project_philico_food.Pages
             updateUIDataComboboxProduct(_productList, cbbPrdCode);
             updateUIDataComboboxProduct(_productList, cbbPrdName);
             LoadFirstWeighGrid();
+            LoadCapacityFromConfig();
             if (!scaleFunc.Connect(spScale))
             {
                 this.Close();
+            }
+        }
+        private void ApplyCapacityRule()
+        {
+            if(_capacityLimit <= 0) return;
+            if (!int.TryParse(lblWeight.Text, out int currentWeight))
+                return;
+
+            if(currentWeight > _capacityLimit)
+            {
+                btnSave.Enabled = false;
+                btnStausWeight.Text = $"OVER CAPACITY (Max: {_capacityLimit})";
             }
         }
 
@@ -268,6 +306,7 @@ namespace Project_philico_food.Pages
             btnStausWeight.FillColor = Color.FromArgb(239, 250, 240);
             btnStausWeight.BorderColor = Color.FromArgb(46, 125, 50);
             btnStausWeight.Text = "STABLE";
+            ApplyCapacityRule();
         }
 
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -443,7 +482,7 @@ namespace Project_philico_food.Pages
                 // weight out
                 string orderNumber = activeOrder.OrderNumber;
 
-                // ดึง weight in จาก OrderDetail
+                
                 var details = detailRepo.GetByOrderNumber(orderNumber);
                 var detailIn = details.FirstOrDefault(d => aESEncryption.Decrypt(d.WeightType) == "IN");
                 if (detailIn == null)

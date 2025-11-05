@@ -1,4 +1,5 @@
-﻿using Project_philico_food.functions;
+﻿using FastReport.Editor.Syntax;
+using Project_philico_food.functions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,13 +22,13 @@ namespace Project_philico_food.Pages
             InitializeComponent();
         }
 
-
         void readConfig()
         {
             AESEncryption aESEncryption = new AESEncryption();
             string comport = aESEncryption.Decrypt(ConfigurationManager.AppSettings["SCALE_PORT"]);
             string bardRate = aESEncryption.Decrypt(ConfigurationManager.AppSettings["SCALE_BAUDRATE"]);
             string stationName = aESEncryption.Decrypt(ConfigurationManager.AppSettings["STATION_NAME"]);
+            string capacity = aESEncryption.Decrypt(ConfigurationManager.AppSettings["CAPACITY"]);
 
             cbbComport.Items.Add(comport);
             cbbComport.SelectedIndex = 0;
@@ -36,6 +37,7 @@ namespace Project_philico_food.Pages
             cbbBaudRate.SelectedIndex = 0;
 
             txtStationName.Text = stationName;
+            txtCapacity.Text = capacity;
         }
 
         void saveConfig()
@@ -45,8 +47,11 @@ namespace Project_philico_food.Pages
             Config1.AppSettings.Settings["SCALE_PORT"].Value = aESEncryption.Encrypt(cbbComport.Text);
             Config1.AppSettings.Settings["SCALE_BAUDRATE"].Value = aESEncryption.Encrypt(cbbBaudRate.Text);
             Config1.AppSettings.Settings["STATION_NAME"].Value = aESEncryption.Encrypt(txtStationName.Text);
+            Config1.AppSettings.Settings["CAPACITY"].Value = aESEncryption.Encrypt(txtCapacity.Text);
 
             Config1.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
+            msg.Parent = this;
             msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
             msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
             msg.Show("Save success please open again", "success");
@@ -56,11 +61,21 @@ namespace Project_philico_food.Pages
 
         private void frmSetting_Load(object sender, EventArgs e)
         {
+
             readConfig();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            // Not null
+            if (cbbComport.Text == "" || cbbBaudRate.Text == "" || txtStationName.Text == "" || txtCapacity.Text == "")
+            {
+                msg.Parent = this;
+                msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
+                msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                msg.Show("Please fill information before save", "Fill information");
+                return;
+            }
             saveConfig();
         }
 
@@ -82,6 +97,21 @@ namespace Project_philico_food.Pages
             {
                 cbbBaudRate.Items.Add(item);
             }
+        }
+
+        private void txtStationName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
