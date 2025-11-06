@@ -1,0 +1,10 @@
+2025/11/05-16:07:53.397 45f0 Creating DB E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe.WebView2\EBWebView\Default\WebStorage\1\IndexedDB\indexeddb.leveldb since it was missing.
+2025/11/05-16:07:53.423 45f0 Reusing MANIFEST E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe.WebView2\EBWebView\Default\WebStorage\1\IndexedDB\indexeddb.leveldb/MANIFEST-000001
+2025/11/05-16:07:53.663 6230 Level-0 table #5: started
+2025/11/05-16:07:53.712 6230 Level-0 table #5: 3706 bytes OK
+2025/11/05-16:07:53.731 6230 Delete type=0 #3
+2025/11/05-16:07:53.744 6230 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/11/05-16:07:53.771 6230 Level-0 table #7: started
+2025/11/05-16:07:53.789 6230 Level-0 table #7: 1590 bytes OK
+2025/11/05-16:07:53.799 6230 Delete type=0 #4
+2025/11/05-16:07:53.805 45f0 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

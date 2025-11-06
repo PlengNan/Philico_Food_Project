@@ -177,3 +177,10 @@ E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug
 E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\FastReport.VSDesign.dll
 E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\FastReport.Web.dll
 E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\FastReport.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\runtimes\win-x64\native\WebView2Loader.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Web.WebView2.Core.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Web.WebView2.WinForms.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Web.WebView2.Wpf.dll
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Web.WebView2.Core.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Web.WebView2.WinForms.xml
+E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Microsoft.Web.WebView2.Wpf.xml

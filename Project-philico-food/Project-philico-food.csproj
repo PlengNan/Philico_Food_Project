@@ -118,6 +118,15 @@
     <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.OLE.Interop.17.14.40260\lib\net472\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3595.46, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3595.46\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3595.46, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3595.46\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3595.46, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3595.46\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard" />
     <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.1.10.2445, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.bundle_e_sqlite3.2.1.10\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
@@ -323,6 +332,8 @@
     <Error Condition="!Exists('..\packages\SourceGear.sqlite3.3.50.4.2\build\net471\SourceGear.sqlite3.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SourceGear.sqlite3.3.50.4.2\build\net471\SourceGear.sqlite3.targets'))" />
     <Error Condition="!Exists('..\packages\FastReport.OpenSource.2026.1.2\build\FastReport.OpenSource.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\FastReport.OpenSource.2026.1.2\build\FastReport.OpenSource.props'))" />
     <Error Condition="!Exists('..\packages\FastReport.Net.Demo.2026.1.2\build\net462\FastReport.Net.Demo.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\FastReport.Net.Demo.2026.1.2\build\net462\FastReport.Net.Demo.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.3595.46\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.3595.46\build\Microsoft.Web.WebView2.targets'))" />
   </Target>
   <Import Project="..\packages\SourceGear.sqlite3.3.50.4.2\build\net471\SourceGear.sqlite3.targets" Condition="Exists('..\packages\SourceGear.sqlite3.3.50.4.2\build\net471\SourceGear.sqlite3.targets')" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.3595.46\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.3595.46\build\Microsoft.Web.WebView2.targets')" />
 </Project>

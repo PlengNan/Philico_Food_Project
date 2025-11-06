@@ -12,16 +12,34 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project_philico_food.Pages;
 
 namespace Project_philico_food.Pages
 {
     public partial class frmSetting : Form
     {
+        private readonly frmMain _main;
         public frmSetting()
         {
             InitializeComponent();
         }
+        public frmSetting(frmMain main)
+        {
+            InitializeComponent();
+            _main = main;
 
+            if (_main != null)
+            {
+                chbWeb.Checked = !_main.IsWebVisible;
+            }
+        }
+        private void chbWeb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (_main == null) return;
+
+            _main.SetWebVisible(!chbWeb.Checked);
+
+        }
         void readConfig()
         {
             AESEncryption aESEncryption = new AESEncryption();
@@ -54,14 +72,14 @@ namespace Project_philico_food.Pages
             msg.Parent = this;
             msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
             msg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            msg.Show("Save success please open again", "success");
+            msg.Show("Save setting success", "success");
             //Application.Exit();
             this.Close();
         }
 
         private void frmSetting_Load(object sender, EventArgs e)
         {
-
+            chbWeb.Checked = false;
             readConfig();
         }
 

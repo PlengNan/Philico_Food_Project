@@ -1,0 +1,14 @@
+2025/11/05-16:25:12.381 72f0 Reusing MANIFEST E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe.WebView2\EBWebView\Default\WebStorage\1\IndexedDB\indexeddb.leveldb/MANIFEST-000001
+2025/11/05-16:25:12.462 72f0 Recovering log #6
+2025/11/05-16:25:12.464 72f0 Reusing old log E:\ThaiScale\Philco Food\Project-philico-food\Project-philico-food\bin\x64\Debug\Project-philico-food.exe.WebView2\EBWebView\Default\WebStorage\1\IndexedDB\indexeddb.leveldb/000006.log 
+2025/11/05-16:25:12.617 6f4c Compacting 1@1 + 1@2 files
+2025/11/05-16:25:12.628 6f4c Generated table #9@1: 46 keys, 1273 bytes
+2025/11/05-16:25:12.628 6f4c Compacted 1@1 + 1@2 files => 1273 bytes
+2025/11/05-16:25:12.633 6f4c compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/11/05-16:25:12.634 6f4c Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/11/05-16:25:12.641 4230 Level-0 table #11: started
+2025/11/05-16:25:12.659 4230 Level-0 table #11: 9865 bytes OK
+2025/11/05-16:25:12.663 4230 Delete type=2 #5
+2025/11/05-16:25:12.663 4230 Delete type=0 #6
+2025/11/05-16:25:12.663 4230 Delete type=2 #7
+2025/11/05-16:25:12.681 7780 Manual compaction at level-0 from '\x00\x08\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x09\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -40,7 +40,6 @@
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbComport = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +49,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCapacity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.chbWeb = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,22 +150,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Athiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            this.label2.Location = new System.Drawing.Point(23, 368);
+            this.label2.Location = new System.Drawing.Point(23, 362);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 31);
             this.label2.TabIndex = 75;
             this.label2.Text = "Program information";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderRadius = 6;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(9, 368);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(8, 30);
-            this.guna2Panel1.TabIndex = 74;
             // 
             // label3
             // 
@@ -234,7 +226,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(123, 501);
+            this.btnSave.Location = new System.Drawing.Point(123, 528);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 45);
             this.btnSave.TabIndex = 80;
@@ -253,7 +245,7 @@
             this.txtStationName.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStationName.ForeColor = System.Drawing.Color.Black;
             this.txtStationName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStationName.Location = new System.Drawing.Point(85, 440);
+            this.txtStationName.Location = new System.Drawing.Point(85, 431);
             this.txtStationName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStationName.Name = "txtStationName";
             this.txtStationName.PlaceholderText = "";
@@ -267,7 +259,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(80, 411);
+            this.label6.Location = new System.Drawing.Point(80, 402);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 25);
             this.label6.TabIndex = 82;
@@ -307,12 +299,56 @@
             this.txtCapacity.TabIndex = 84;
             this.txtCapacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // chbWeb
+            // 
+            this.chbWeb.Animated = true;
+            this.chbWeb.AutoSize = true;
+            this.chbWeb.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbWeb.CheckedState.BorderRadius = 3;
+            this.chbWeb.CheckedState.BorderThickness = 0;
+            this.chbWeb.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbWeb.Font = new System.Drawing.Font("Athiti", 14.25F, System.Drawing.FontStyle.Bold);
+            this.chbWeb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            this.chbWeb.Location = new System.Drawing.Point(29, 487);
+            this.chbWeb.Name = "chbWeb";
+            this.chbWeb.Size = new System.Drawing.Size(147, 35);
+            this.chbWeb.TabIndex = 85;
+            this.chbWeb.Tag = "web";
+            this.chbWeb.Text = "Hide Website";
+            this.chbWeb.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbWeb.UncheckedState.BorderRadius = 3;
+            this.chbWeb.UncheckedState.BorderThickness = 0;
+            this.chbWeb.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbWeb.CheckedChanged += new System.EventHandler(this.chbWeb_CheckedChanged);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.BorderRadius = 6;
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(9, 362);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(8, 30);
+            this.guna2Panel1.TabIndex = 74;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.BorderRadius = 6;
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(140)))), ((int)(((byte)(228)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(9, 487);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(8, 30);
+            this.guna2Panel2.TabIndex = 75;
+            // 
             // frmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(387, 568);
+            this.ClientSize = new System.Drawing.Size(387, 605);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.chbWeb);
             this.Controls.Add(this.txtCapacity);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -355,7 +391,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox cbbBaudRate;
@@ -366,5 +401,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtStationName;
         private Guna.UI2.WinForms.Guna2TextBox txtCapacity;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2CheckBox chbWeb;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

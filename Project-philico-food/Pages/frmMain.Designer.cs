@@ -37,13 +37,15 @@
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnTodayReport = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCus
@@ -65,7 +67,7 @@
             this.btnCus.Image = ((System.Drawing.Image)(resources.GetObject("btnCus.Image")));
             this.btnCus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCus.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnCus.Location = new System.Drawing.Point(3, 3);
+            this.btnCus.Location = new System.Drawing.Point(12, 94);
             this.btnCus.Name = "btnCus";
             this.btnCus.Size = new System.Drawing.Size(169, 45);
             this.btnCus.TabIndex = 19;
@@ -92,7 +94,7 @@
             this.btnPro.Image = ((System.Drawing.Image)(resources.GetObject("btnPro.Image")));
             this.btnPro.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPro.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPro.Location = new System.Drawing.Point(178, 3);
+            this.btnPro.Location = new System.Drawing.Point(187, 94);
             this.btnPro.Name = "btnPro";
             this.btnPro.Size = new System.Drawing.Size(169, 45);
             this.btnPro.TabIndex = 20;
@@ -119,7 +121,7 @@
             this.btnWeight.Image = ((System.Drawing.Image)(resources.GetObject("btnWeight.Image")));
             this.btnWeight.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnWeight.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnWeight.Location = new System.Drawing.Point(528, 3);
+            this.btnWeight.Location = new System.Drawing.Point(537, 94);
             this.btnWeight.Name = "btnWeight";
             this.btnWeight.Size = new System.Drawing.Size(169, 45);
             this.btnWeight.TabIndex = 21;
@@ -146,7 +148,7 @@
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSetting.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSetting.Location = new System.Drawing.Point(1053, 3);
+            this.btnSetting.Location = new System.Drawing.Point(1061, 94);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(169, 45);
             this.btnSetting.TabIndex = 22;
@@ -180,7 +182,7 @@
             this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUsers.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnUsers.Location = new System.Drawing.Point(353, 3);
+            this.btnUsers.Location = new System.Drawing.Point(362, 94);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(169, 45);
             this.btnUsers.TabIndex = 23;
@@ -207,7 +209,7 @@
             this.btnTodayReport.Image = ((System.Drawing.Image)(resources.GetObject("btnTodayReport.Image")));
             this.btnTodayReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTodayReport.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnTodayReport.Location = new System.Drawing.Point(703, 3);
+            this.btnTodayReport.Location = new System.Drawing.Point(712, 94);
             this.btnTodayReport.Name = "btnTodayReport";
             this.btnTodayReport.Size = new System.Drawing.Size(169, 45);
             this.btnTodayReport.TabIndex = 24;
@@ -234,7 +236,7 @@
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReports.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReports.Location = new System.Drawing.Point(878, 3);
+            this.btnReports.Location = new System.Drawing.Point(887, 94);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(169, 45);
             this.btnReports.TabIndex = 25;
@@ -242,88 +244,101 @@
             this.btnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnCus);
-            this.flowLayoutPanel1.Controls.Add(this.btnPro);
-            this.flowLayoutPanel1.Controls.Add(this.btnUsers);
-            this.flowLayoutPanel1.Controls.Add(this.btnWeight);
-            this.flowLayoutPanel1.Controls.Add(this.btnTodayReport);
-            this.flowLayoutPanel1.Controls.Add(this.btnReports);
-            this.flowLayoutPanel1.Controls.Add(this.btnSetting);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1233, 66);
-            this.flowLayoutPanel1.TabIndex = 26;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(97, 127);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1029, 538);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 27;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AnimatedGIF = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
-            this.guna2Button1.BorderRadius = 4;
-            this.guna2Button1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Athiti", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(151)))));
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(100, 100);
-            this.guna2Button1.Location = new System.Drawing.Point(193, 82);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(854, 187);
-            this.guna2Button1.TabIndex = 28;
-            this.guna2Button1.Text = "WELCOME TO PROGRAM";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(1132, 72);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(4, 3);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(90, 75);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 29;
             this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Athiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(100, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(498, 60);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Program weighing for truck";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Location = new System.Drawing.Point(6, 155);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(1235, 721);
+            this.webView21.TabIndex = 32;
+            this.webView21.ZoomFactor = 1D;
+            this.webView21.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView21_NavigationCompleted);
+            this.webView21.Click += new System.EventHandler(this.webView21_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSetting);
+            this.panel1.Controls.Add(this.btnReports);
+            this.panel1.Controls.Add(this.btnTodayReport);
+            this.panel1.Controls.Add(this.btnWeight);
+            this.panel1.Controls.Add(this.btnUsers);
+            this.panel1.Controls.Add(this.btnPro);
+            this.panel1.Controls.Add(this.btnCus);
+            this.panel1.Controls.Add(this.guna2PictureBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1249, 155);
+            this.panel1.TabIndex = 34;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(144, 155);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(999, 712);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 33;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Visible = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1233, 666);
-            this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(1249, 888);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.webView21);
             this.Font = new System.Drawing.Font("Athiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load_1);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,9 +352,10 @@
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnTodayReport;
         private Guna.UI2.WinForms.Guna2Button btnReports;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private System.Windows.Forms.Label label1;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
